@@ -1,0 +1,30 @@
+.header {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.options-item {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  height: auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transition: all 0.3s ease;
+    transform: translateY(0.3rem);    
+  }
+}

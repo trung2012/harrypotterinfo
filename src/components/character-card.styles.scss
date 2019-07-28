@@ -1,0 +1,30 @@
+.character-card {
+  min-height: 31rem;
+  margin: 3rem 2rem;  
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 22rem;
+  border-radius: 3px;  
+  border: white 3px solid;
+  justify-content: center;
+}
+
+.character-card-image-container {
+  img {
+    max-height: 20rem;
+    max-width: 17rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0.4rem;
+  }
+}
+
+.character-card-info {
+  text-transform: uppercase;
+}
+
+.character-card-info-name {
+  font-family: 'Crimson Text', serif;
+  font-size: 2rem;
+}
