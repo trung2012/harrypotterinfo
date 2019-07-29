@@ -1,0 +1,47 @@
+.spells-page {
+  margin-top: 4rem;
+}
+.spells-page-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.spell-description {
+  line-height: 1.8;
+  padding-left: 7rem;
+
+  .spell-description-header {
+    font-size: 4rem;
+  }
+
+  .spell-description-content {
+    font-size: 2rem;
+  }
+}
+
+.spells-video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-bottom: 8rem;
+
+  .spells-video-header {
+    margin-bottom: 3rem;
+  }
+}
+
+.spells-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.spells-overview-grid-item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

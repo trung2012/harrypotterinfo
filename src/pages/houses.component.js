@@ -7,42 +7,44 @@ import './houses.styles.scss';
 
 class HousesPage extends React.Component {
   state = {
-    houses: []
+    houses: [],
+    isLoading: false,
+    errorMessage: ''
   }
 
   componentDidMount() {
-    potterapi.get('/houses', {
-      params: {
-        key: KEY
-      }
+    this.setState({ isLoading: true }, () => {
+      potterapi.get('/houses', {
+        params: {
+          key: KEY
+        }
+      })
+        .then(res => this.setState({ houses: res.data, isLoading: false }))
+        .catch(err => this.setState({ errorMessage: 'Oops something went wrong', isLoading: false }));
     })
-      .then(res => this.setState({ houses: res.data }))
   }
 
   render() {
-    return (
-      <>
-        {
-          this.state.houses.length ?
-            <div className='houses-overview'>
-              {
-                this.state.houses.map(house => {
-                  const imageUrl = mapImageToHouse(house.name);
-                  return (
-                    <div key={house._id} className='house'>
-                      <div className='house-image-container'>
-                        <img src={imageUrl} alt='house' className='house-image' />
-                      </div>
-                      <div className='house-name'>{house.name}</div>
-                    </div>
-                  );
-                })
-              }
-            </div>
-            : <Spinner />
-        }
+    const { houses, errorMessage, isLoading } = this.state;
 
-      </>
+    if (errorMessage) return <h1>{errorMessage}</h1>
+    else if (isLoading) return <Spinner />
+    return (
+      <div className='houses-overview'>
+        {
+          houses.map(house => {
+            const imageUrl = mapImageToHouse(house.name);
+            return (
+              <div key={house._id} className='house'>
+                <div className='house-image-container'>
+                  <img src={imageUrl} alt='house' className='house-image' />
+                </div>
+                <div className='house-name'>{house.name}</div>
+              </div>
+            );
+          })
+        }
+      </div>
     );
   }
 }

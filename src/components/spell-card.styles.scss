@@ -1,0 +1,53 @@
+.spell-card {
+  min-height: 45rem;  
+  width: 37rem;
+  margin: 3rem 2rem;  
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: .3rem;  
+  border: white .3rem solid;
+  box-shadow: .3rem .5rem 1rem #666 ;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: .5rem .9rem 1.2rem #666 ;
+  }
+}
+
+.spell-card-image-container {
+  max-width: 35rem;  
+  margin: 1.2rem 0;
+  border-radius: 0.4rem;
+
+  img {
+    max-width: 90%;
+    max-height: 30rem;
+    border: 0.1rem solid #807d7d;
+  }
+}
+
+.spell-card-info {
+  text-align: left;
+  line-height: 1.8;
+  padding: 0 3rem;
+
+  .spell-card-info-name {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .spell-card-info-item {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+  }
+}
+

@@ -437,7 +437,7 @@ const charactersWithImage = [
   },
   {
     "name": "Harry Potter",
-    "url": "https://vignette.wikia.nocookie.net/harrypotter/images/8/8d/PromoHP7_Harry_Potter.jpg/revision/latest/scale-to-width-down/350?cb=20140603201724"
+    "url": "https://vignette.wikia.nocookie.net/harrypotter/images/7/78/GOF_promo_front_Harry_Potter.jpg/revision/latest/scale-to-width-down/350?cb=20190426143930"
   },
   {
     "name": "James Potter I",
@@ -445,7 +445,7 @@ const charactersWithImage = [
   },
   {
     "name": "Lily J. Potter",
-    "url": "https://vignette.wikia.nocookie.net/harrypotter/images/4/40/Harry-potter7-lily_evans.jpg/revision/latest/scale-to-width-down/350?cb=20170731053120"
+    "url": "https://vignette.wikia.nocookie.net/harrypotter/images/0/0e/Lily_DHP1-0.png/revision/latest/scale-to-width-down/350?cb=20190604121340"
   },
   {
     "name": "Ernest Prang",

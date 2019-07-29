@@ -5,6 +5,7 @@ import HomePage from './pages/homepage.component';
 import HousesPage from './pages/houses.component';
 import Header from './components/header.component';
 import CharactersOverview from './components/characters-overview.component';
+import SpellsOverview from './components/spells-overview.component';
 import './App.css';
 
 class App extends React.Component {
@@ -16,8 +17,8 @@ class App extends React.Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/characters' component={CharactersOverview} />
           <Route exact path='/houses' component={HousesPage} />
-          {/* <Route path='/spells' component={HomePage} />
-          
+          <Route path='/spells' component={SpellsOverview} />
+          {/*           
           <Route exact path='/sortinghat' component={HomePage} /> */}
         </Switch>
       </div>
