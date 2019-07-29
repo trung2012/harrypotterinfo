@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { mapImageToCharacter } from '../utils/helper';
+import { mapDataToCharacter } from '../utils/helper';
 import './character-card.styles.scss';
 import placeholderImage from '../assets/wizard.jpg';
 
-const CharacterCard = ({ name, role, bloodStatus }) => {
-  const imageUrl = mapImageToCharacter(name);
+const CharacterCard = ({ name }) => {
+  const imageUrl = mapDataToCharacter(name) ? mapDataToCharacter(name).imageUrl : null;
 
   return (
     <div className='character-card'>

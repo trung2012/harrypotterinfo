@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import HomePage from './pages/homepage.component';
-import HousesPage from './pages/houses.component';
+import HousesPage from './pages/houses-page.component';
 import Header from './components/header.component';
 import CharactersOverview from './components/characters-overview.component';
 import SpellsOverview from './components/spells-overview.component';
@@ -16,7 +16,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/characters' component={CharactersOverview} />
-          <Route exact path='/houses' component={HousesPage} />
+          <Route path='/houses' component={HousesPage} />
           <Route path='/spells' component={SpellsOverview} />
           {/*           
           <Route exact path='/sortinghat' component={HomePage} /> */}

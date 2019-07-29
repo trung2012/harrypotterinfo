@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { mapImageToSpell } from '../utils/helper';
+import { mapDataToSpell } from '../utils/helper';
 import './spell-card.styles.scss';
 import placeholderImage from '../assets/wizard.jpg';
 
 const SpellCard = ({ spell, type, effect }) => {
-  const imageUrl = mapImageToSpell(spell);
+  const imageUrl = mapDataToSpell(spell) ? mapDataToSpell(spell).imageUrl : null;
 
   return (
     <div className='spell-card'>

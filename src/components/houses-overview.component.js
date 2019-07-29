@@ -1,11 +1,12 @@
 import React from 'react';
 import potterapi, { KEY } from '../apis/potterapi';
-import { mapImageToHouse } from '../utils/helper';
-import Spinner from '../components/spinner.component';
+import { mapDataToHouse } from '../utils/helper';
+import Spinner from './spinner.component';
+import HouseOverviewItem from './houses-overview-item.component'
 
-import './houses.styles.scss';
+import './houses-overview.styles.scss';
 
-class HousesPage extends React.Component {
+class HousesOverview extends React.Component {
   state = {
     houses: [],
     isLoading: false,
@@ -33,15 +34,12 @@ class HousesPage extends React.Component {
       <div className='houses-overview'>
         {
           houses.map(house => {
-            const imageUrl = mapImageToHouse(house.name);
-            return (
-              <div key={house._id} className='house'>
-                <div className='house-image-container'>
-                  <img src={imageUrl} alt='house' className='house-image' />
-                </div>
-                <div className='house-name'>{house.name}</div>
-              </div>
-            );
+            const imageUrl = mapDataToHouse(house.name) ? mapDataToHouse(house.name).imageUrl : null;
+            return <HouseOverviewItem
+              key={house._id}
+              imageUrl={imageUrl}
+              name={house.name}
+            />
           })
         }
       </div>
@@ -49,4 +47,4 @@ class HousesPage extends React.Component {
   }
 }
 
-export default HousesPage;
+export default HousesOverview;
