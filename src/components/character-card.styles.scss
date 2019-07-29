@@ -1,14 +1,20 @@
 .character-card {
-  min-height: 31rem;
+  min-height: 33rem;  
+  width: 24rem;
   margin: 3rem 2rem;  
   padding: 1.8rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   text-align: center;
-  width: 22rem;
-  border-radius: 3px;  
-  border: white 3px solid;
-  justify-content: center;
+  border-radius: .3rem;  
+  border: white .3rem solid;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .character-card-image-container {
@@ -17,6 +23,7 @@
     max-width: 17rem;
     margin-bottom: 1.2rem;
     border-radius: 0.4rem;
+    border: 0.1rem solid #807d7d;
   }
 }
 

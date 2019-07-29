@@ -1,0 +1,31 @@
+.houses-overview {
+  display: flex;
+  margin-top: 10rem;
+}
+
+.house {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  font-family: 'Rye', cursive;
+  cursor: pointer;
+}
+
+.house-image-container {
+  margin-bottom: 1rem;
+  transition:all .5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+  
+  .house-image {
+    width: 30rem;
+    border-radius: 1rem;
+    border: #fff solid 1px;
+  }
+}
+

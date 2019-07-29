@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { mapImageToCharacter } from './helper';
+import { mapImageToCharacter } from '../utils/helper';
 import './character-card.styles.scss';
 import placeholderImage from '../assets/wizard.jpg';
 

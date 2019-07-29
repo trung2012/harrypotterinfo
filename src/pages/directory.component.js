@@ -8,8 +8,8 @@ const Directory = () => {
   return (
     <div className='directory'>
       {
-        sections.map(({ title, imageUrl }) => (
-          <MenuItem title={title} imageUrl={imageUrl} />
+        sections.map(({ title, imageUrl, pathUrl }) => (
+          <MenuItem key={title} title={title} imageUrl={imageUrl} pathUrl={pathUrl} />
         ))
       }
     </div>

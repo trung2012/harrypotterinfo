@@ -4,6 +4,10 @@
   justify-content: space-between;
 }
 
+.logo {
+  padding-left: 2rem;
+}
+
 .options {
   display: flex;
   justify-content: flex-end;
@@ -26,5 +30,9 @@
   &:active {
     transition: all 0.3s ease;
     transform: translateY(0.3rem);    
+  }
+
+  &:last-child {
+    margin-right: 10rem;
   }
 }
