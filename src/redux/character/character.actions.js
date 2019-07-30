@@ -36,7 +36,7 @@ export const fetchCharactersStartAsync = () => dispatch => {
   })
     .then(res => {
       let updatedCharacters = res.data.map(character => {
-        let characterWithImage = charactersWithImage.find(characterWithImage => characterWithImage.name === character.name);
+        let characterWithImage = charactersWithImage.find(characterWithImage => characterWithImage.name.trim() === character.name.trim());
         return characterWithImage ? { ...character, ...characterWithImage } : character;
       })
       dispatch(fetchCharactersSuccess(updatedCharacters));

@@ -4,7 +4,7 @@ import {
   FETCH_CHARACTERS_FAILURE,
   FILTER_CHARACTERS
 } from './character.types';
-import { filterCharactersWithInput } from '../../utils/helper';
+import { filterDataWithInput } from '../../utils/helper';
 
 const initialState = {
   characters: [],
@@ -23,7 +23,7 @@ const characterReducer = (state = initialState, action) => {
     case FETCH_CHARACTERS_FAILURE:
       return { ...state, isLoading: false, errorMessage: action.payload };
     case FILTER_CHARACTERS:
-      return { ...state, searchInput: action.payload, filteredCharacters: filterCharactersWithInput(state.characters, action.payload) }
+      return { ...state, searchInput: action.payload, filteredCharacters: filterDataWithInput(state.characters, action.payload) }
     default:
       return state;
   }

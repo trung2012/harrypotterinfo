@@ -15,11 +15,10 @@ export const mapDataToSpell = mapDataToName(spells);
 
 export const isExisting = (attribute) => attribute ? attribute : 'Unknown';
 
-export const filterCharactersWithInput = (characters, searchInput) => {
-  return characters.filter(character => {
-    if (character.alias) {
-      return character.name.toLowerCase().includes(searchInput) || character.alias.toLowerCase().includes(searchInput);
-    }
-    return character.name.toLowerCase().includes(searchInput)
+export const filterDataWithInput = (dataArray, searchInput) => {
+  return dataArray.filter(item => {
+    if (item.spell) return item.spell.toLowerCase().includes(searchInput);
+    if (item.alias) return item.name.toLowerCase().includes(searchInput) || item.alias.toLowerCase().includes(searchInput);
+    return item.name.toLowerCase().includes(searchInput)
   })
 };
