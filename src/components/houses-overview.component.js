@@ -1,44 +1,29 @@
 import React from 'react';
-import potterapi, { KEY } from '../apis/potterapi';
-import { mapDataToHouse } from '../utils/helper';
+import { connect } from 'react-redux';
+
 import Spinner from './spinner.component';
 import HouseOverviewItem from './houses-overview-item.component'
-
+import { fetchHousesStartAsync } from '../redux/house/house.actions';
 import './houses-overview.styles.scss';
 
 class HousesOverview extends React.Component {
-  state = {
-    houses: [],
-    isLoading: false,
-    errorMessage: ''
-  }
 
   componentDidMount() {
-    this.setState({ isLoading: true }, () => {
-      potterapi.get('/houses', {
-        params: {
-          key: KEY
-        }
-      })
-        .then(res => this.setState({ houses: res.data, isLoading: false }))
-        .catch(err => this.setState({ errorMessage: 'Oops something went wrong', isLoading: false }));
-    })
+    this.props.fetchHousesStartAsync();
   }
 
   render() {
-    const { houses, errorMessage, isLoading } = this.state;
+    const { houses, errorMessage, isLoading } = this.props;
 
     if (errorMessage) return <h1>{errorMessage}</h1>
     else if (isLoading) return <Spinner />
     return (
       <div className='houses-overview'>
         {
-          houses.map(house => {
-            const imageUrl = mapDataToHouse(house.name) ? mapDataToHouse(house.name).imageUrl : null;
+          houses.map(({ _id, ...otherProps }) => {
             return <HouseOverviewItem
-              key={house._id}
-              imageUrl={imageUrl}
-              name={house.name}
+              key={_id}
+              {...otherProps}
             />
           })
         }
@@ -47,4 +32,10 @@ class HousesOverview extends React.Component {
   }
 }
 
-export default HousesOverview;
+const mapStateToProps = state => ({
+  houses: state.house.houses,
+  isLoading: state.house.isLoading,
+  errorMessage: state.house.errorMessage
+})
+
+export default connect(mapStateToProps, { fetchHousesStartAsync })(HousesOverview);
