@@ -1,44 +1,20 @@
 import React from 'react';
-import potterapi, { KEY } from '../apis/potterapi';
+import { connect } from 'react-redux';
 import CharacterCard from './character-card.component';
 import SearchBar from './searchbar.component';
 import Spinner from './spinner.component';
-
+import { fetchCharactersStartAsync } from '../redux/character/character.actions';
 import './characters-overview.styles.scss';
 
 class CharactersOverview extends React.Component {
-  state = {
-    characters: [],
-    searchInput: '',
-    isLoading: false,
-    errorMessage: ''
-  }
 
   componentDidMount() {
-    this.setState({ isLoading: true }, () => {
-      potterapi.get('/characters', {
-        params: {
-          key: KEY
-        }
-      })
-        .then(res => this.setState({ characters: res.data, isLoading: false }))
-        .catch(err => this.setState({ errorMessage: 'Oops something went wrong', isLoading: false }));
-    })
-
-  }
-
-  onInputChange = event => {
-    this.setState({ searchInput: event.target.value });
+    this.props.fetchCharactersStartAsync();
   }
 
   render() {
-    const { characters, searchInput, isLoading, errorMessage } = this.state;
-    const filteredCharacters = characters.filter(character => {
-      if (character.alias) {
-        return character.name.toLowerCase().includes(searchInput) || character.alias.toLowerCase().includes(searchInput);
-      }
-      return character.name.toLowerCase().includes(searchInput)
-    })
+    const { characters, isLoading, errorMessage, filteredCharacters } = this.props;
+
 
     if (errorMessage) return <h1>{errorMessage}</h1>
     else if (isLoading) return <Spinner />
@@ -48,7 +24,7 @@ class CharactersOverview extends React.Component {
           filteredCharacters.length
             ? (
               <div className='characters-page'>
-                <SearchBar type='character' searchInput={this.state.searchInput} onInputChange={this.onInputChange} />
+                <SearchBar type='character' />
                 <div className='characters-overview'>
                   {
                     filteredCharacters.map(({ _id, ...otherProps }) => (
@@ -61,7 +37,7 @@ class CharactersOverview extends React.Component {
               </div>
             )
             : <div>
-              <SearchBar type='character' searchInput={this.state.searchInput} onInputChange={this.onInputChange} />
+              <SearchBar type='character' />
               <h1>No Characters Found</h1>
             </div>
         }
@@ -70,4 +46,15 @@ class CharactersOverview extends React.Component {
   }
 }
 
-export default CharactersOverview;
+const mapStateToProps = (state) => ({
+  characters: state.character.characters,
+  errorMessage: state.character.errorMessage,
+  isLoading: state.character.isLoading,
+  filteredCharacters: state.character.filteredCharacters
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchCharactersStartAsync: () => dispatch(fetchCharactersStartAsync())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CharactersOverview);
