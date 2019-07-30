@@ -3,7 +3,9 @@ import {
   FETCH_CHARACTERS_SUCCESS,
   FETCH_CHARACTERS_FAILURE,
   FILTER_CHARACTERS
-} from './characters.types';
+} from './character.types';
+
+import charactersWithImage from '../../utils/characters_images';
 import potterapi, { KEY } from '../../apis/potterapi';
 
 export const fetchCharactersStart = () => ({
@@ -20,6 +22,11 @@ export const fetchCharactersFailure = errorMessage => ({
   payload: errorMessage
 });
 
+export const filterCharacters = searchInput => ({
+  type: FILTER_CHARACTERS,
+  payload: searchInput
+});
+
 export const fetchCharactersStartAsync = () => dispatch => {
   dispatch(fetchCharactersStart());
   potterapi.get('/characters', {
@@ -27,11 +34,12 @@ export const fetchCharactersStartAsync = () => dispatch => {
       key: KEY
     }
   })
-    .then(res => dispatch(fetchCharactersSuccess(res.data)))
+    .then(res => {
+      let updatedCharacters = res.data.map(character => {
+        let characterWithImage = charactersWithImage.find(characterWithImage => characterWithImage.name === character.name);
+        return characterWithImage ? { ...character, ...characterWithImage } : character;
+      })
+      dispatch(fetchCharactersSuccess(updatedCharacters));
+    })
     .catch(err => dispatch(fetchCharactersFailure(err)));
 }
-
-export const filterCharacters = searchInput => ({
-  type: FILTER_CHARACTERS,
-  payload: searchInput
-});

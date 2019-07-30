@@ -3,9 +3,8 @@ import {
   FETCH_CHARACTERS_SUCCESS,
   FETCH_CHARACTERS_FAILURE,
   FILTER_CHARACTERS
-} from './characters.types';
+} from './character.types';
 import { filterCharactersWithInput } from '../../utils/helper';
-
 
 const initialState = {
   characters: [],
