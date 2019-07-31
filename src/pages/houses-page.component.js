@@ -1,14 +1,19 @@
 import React from 'react'
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import HouseOverview from '../components/houses-overview.component';
 import HouseDetails from '../components/house-details.component';
+import Header from '../components/header.component';
 
 const HousesPage = ({ match }) => {
   return (
     <div className='houses-page'>
-      <Route exact path={`${match.path}`} component={HouseOverview} />
-      <Route path={`${match.path}/:houseName`} component={HouseDetails} />
+      <Header />
+      <Switch>
+        <Route exact path={`${match.path}`} component={HouseOverview} />
+        <Route path={`${match.path}/:houseName`} component={HouseDetails} />
+      </Switch>
     </div>
+
   );
 }
 
