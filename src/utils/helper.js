@@ -17,8 +17,8 @@ export const isExisting = (attribute) => attribute ? attribute : 'Unknown';
 
 export const filterDataWithInput = (dataArray, searchInput) => {
   return dataArray.filter(item => {
-    if (item.spell) return item.spell.toLowerCase().includes(searchInput);
-    if (item.alias) return item.name.toLowerCase().includes(searchInput) || item.alias.toLowerCase().includes(searchInput);
-    return item.name.toLowerCase().includes(searchInput)
+    if (item.spell) return item.spell.toLowerCase().includes(searchInput.toLowerCase());
+    if (item.alias) return item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.alias.toLowerCase().includes(searchInput.toLowerCase());
+    return item.name.toLowerCase().includes(searchInput.toLowerCase())
   })
 };

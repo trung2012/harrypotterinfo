@@ -10,14 +10,15 @@ html {
 
 body {
   font-size: 1.6rem;
-  color:#fff;
+  color:#333;
   padding: 1rem 2rem;  
-  background: #a73737;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #7a2828, #a73737);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #7a2828, #a73737); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #a73737;  
+  background: -webkit-linear-gradient(to right, #7a2828, #a73737);  
+  background: linear-gradient(to right, #7a2828, #a73737);  */
+  background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(238,238,238,1) 50%);
 }
 
 a {
 	text-decoration: none;
-	color: white;
+	color: #333;
 }
