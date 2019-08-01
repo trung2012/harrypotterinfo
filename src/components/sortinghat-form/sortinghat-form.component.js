@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Question from './Question';
+import WelcomePage from './Welcome';
 
 class SortingHatForm extends React.Component {
   state = {
@@ -18,7 +19,7 @@ class SortingHatForm extends React.Component {
       score: 0
     },
     hufflepuff: {
-      name: '',
+      name: 'Hufflepuff',
       score: 0
     },
     sortResult: ''
@@ -53,11 +54,60 @@ class SortingHatForm extends React.Component {
   }
 
   render() {
-    return <Question
-      question_number={1}
-      goToNext={this.goToNext}
-      addPointsToHouse={this.addPointsToHouse}
-    />
+    switch (this.state.current_question) {
+      case 1:
+        return <Question
+          question_number={1}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 2:
+        return <Question
+          question_number={2}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 3:
+        return <Question
+          question_number={3}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 4:
+        return <Question
+          question_number={4}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 5:
+        return <Question
+          question_number={5}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 6:
+        return <Question
+          question_number={6}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 7:
+        return <Question
+          question_number={7}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      case 8:
+        return <Question
+          question_number={8}
+          goToNext={this.goToNext}
+          addPointsToHouse={this.addPointsToHouse}
+        />
+      default:
+        return <WelcomePage
+          goToNext={this.goToNext}
+        />
+    }
   }
 }
 

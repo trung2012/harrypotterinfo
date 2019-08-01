@@ -5,10 +5,12 @@ import './homepage.styles.scss';
 
 const HomePage = () => {
   return (
-    <div className='homepage'>
+    <>
       <Header />
-      <Directory />
-    </div>
+      <div className='homepage'>
+        <Directory />
+      </div>
+    </>
   );
 }
 

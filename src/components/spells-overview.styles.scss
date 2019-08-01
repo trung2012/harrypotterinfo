@@ -1,5 +1,6 @@
 .spells-page {
   margin-top: 4rem;
+  font-family: 'Magorian Regular', serif;
 }
 .spells-page-header {
   display: grid;
@@ -11,11 +12,11 @@
   padding-left: 7rem;
 
   .spell-description-header {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .spell-description-content {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -25,7 +26,7 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   margin-bottom: 8rem;
 
   .spells-video-header {

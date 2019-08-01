@@ -1,10 +1,11 @@
 const quiz_questions = [
   {
     "question_number": 1,
+    "backgroundColor": "#cf3b01",
     "question": "Dawn or Dusk?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/dawn-dusk/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/dawn-dusk/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/dawn-dusk/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/dawn-dusk/bg/medium.jpg", "animation": "in20" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/dawn-dusk/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/dawn-dusk/fg/medium.png", "animation": "out10" },
     "answers": [
       {
         "text": "Dawn",
@@ -28,10 +29,11 @@ const quiz_questions = [
   },
   {
     "question_number": 1,
-    "question": "Stars or Moon?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/moon-stars/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/moon-stars/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/moon-stars/fg/large.png",
+    "backgroundColor": "#4a008f",
+    "question": "Moon or Stars?",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/moon-stars/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/moon-stars/mg/medium.png", "animation": "in5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/moon-stars/fg/medium.png", "animation": "in10" },
     "answers": [
       {
         "text": "Stars",
@@ -55,10 +57,11 @@ const quiz_questions = [
   },
   {
     "question_number": 1,
+    "backgroundColor": "#4a008f",
     "question": "Forest or River?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/forest-river/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/forest-river/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/forest-river/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/forest-river/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/forest-river/mg/medium.png", "animation": "in5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/forest-river/fg/medium.png", "animation": "in10" },
     "answers": [
       {
         "text": "Forest",
@@ -82,10 +85,11 @@ const quiz_questions = [
   },
   {
     "question_number": 2,
-    "question": "What would you least liked to be called?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/label/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/label/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/label/fg/large.png",
+    "backgroundColor": "#8a0d45",
+    "question": "What would you hate to be called?",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/label/bg/medium.jpg", "animation": "out15" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/label/mg/medium.png", "animation": "in5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/label/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Ignorant",
@@ -127,10 +131,11 @@ const quiz_questions = [
   },
   {
     "question_number": 2,
+    "backgroundColor": "#222222",
     "question": "When you're dead, what do you want people do when they think of you?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/fg/medium.png", "animation": "out10" },
     "answers": [
       {
         "text": "Miss me and smile",
@@ -172,10 +177,11 @@ const quiz_questions = [
   },
   {
     "question_number": 2,
-    "question": "When I'm dead, I want people to remember me as:",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/fg/large.png",
+    "backgroundColor": "#222222",
+    "question": "How would you like to be known to history?",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/legacy/fg/medium.png", "animation": "out10" },
     "answers": [
       {
         "text": "The Good",
@@ -217,10 +223,11 @@ const quiz_questions = [
   },
   {
     "question_number": 2,
+    "backgroundColor": "#3c8155",
     "question": "If you could make a potion that would guarantee you one thing, what would it be?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/potion/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/potion/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/potion/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/potion/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/potion/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/potion/fg/medium.png", "animation": "out15" },
     "answers": [
       {
         "text": "Love",
@@ -262,10 +269,11 @@ const quiz_questions = [
   },
   {
     "question_number": 3,
+    "backgroundColor": "#7041a3",
     "question": "Four goblets are placed before you. Which do you drink?",
-    "background": "(https://my.pottermore.com/assets/img/illustration/sorting-hat/goblets/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/goblets/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/goblets/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/goblets/bg/medium.jpg", "animation": "out10" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/goblets/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/goblets/fg/medium.png", "animation": "in5" },
     "answers": [
       {
         "text": "The golden liquid so bright that it hurts the eye, and which makes sunspots dance all around the room.",
@@ -307,10 +315,11 @@ const quiz_questions = [
   },
   {
     "question_number": 3,
+    "backgroundColor": "#320065",
     "question": "Which instrument is most pleasing to your ear?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/instrument/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/instrument/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/instrument/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/instrument/bg/medium.jpg", "animation": "in15" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/instrument/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/instrument/fg/medium.png", "animation": "out15" },
     "answers": [
       {
         "text": "Violin",
@@ -352,10 +361,11 @@ const quiz_questions = [
   },
   {
     "question_number": 3,
+    "backgroundColor": "#4a018f",
     "question": "You enter a magical garden. What do you look at first?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/garden/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/garden/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/garden/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/garden/bg/medium.jpg", "animation": "out10" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/garden/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/garden/fg/medium.png", "animation": "in5" },
     "answers": [
       {
         "text": "Luminous Pool with something in its depths",
@@ -376,7 +386,7 @@ const quiz_questions = [
         }
       },
       {
-        "text": "A silver tree with golden apples",
+        "text": "A silver leafed tree with golden apples",
         "houseScores": {
           "gryffindor": 0,
           "slytherin": 0,
@@ -397,10 +407,11 @@ const quiz_questions = [
   },
   {
     "question_number": 3,
+    "backgroundColor": "#292814",
     "question": "Four boxes are set before you. Which do you open?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/boxes/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/boxes/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/boxes/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/boxes/bg/medium.jpg", "animation": "out10" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/boxes/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/boxes/fg/medium.png", "animation": "in5" },
     "answers": [
       {
         "text": "A plain jet black box with a silver rune that you know to be the mark of Merlin.",
@@ -442,10 +453,11 @@ const quiz_questions = [
   },
   {
     "question_number": 3,
+    "backgroundColor": "#005458",
     "question": "Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it lured you, it would smell of",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bush/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bush/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bush/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bush/bg/medium.jpg", "animation": "in15" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bush/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bush/fg/medium.png", "animation": "out15" },
     "answers": [
       {
         "text": "Home",
@@ -487,10 +499,11 @@ const quiz_questions = [
   },
   {
     "question_number": 4,
-    "question": "A troll breaks into the Headmaster's study. Order the following items in the order that you would save them:Dragon Pox Cure That The Headmaster Has Nearly Completed, Student Records Going Back 1000 Years, A Book Of Indecipherable Runes Thought To Have Been Owned By Merlin",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/troll/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/troll/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/troll/fg/large.png",
+    "backgroundColor": "#320a6b",
+    "question": "A troll breaks into the Headmaster's study. Order the following items in the order that you would save them: Dragon Pox Cure That The Headmaster Has Nearly Completed, Student Records Going Back 1000 Years, A Book Of Indecipherable Runes Thought To Have Been Owned By Merlin",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/troll/bg/medium.jpg", "animation": "out15" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/troll/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/troll/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Cure > Book > Records",
@@ -550,10 +563,11 @@ const quiz_questions = [
   },
   {
     "question_number": 4,
+    "backgroundColor": "#324532",
     "question": "What would you rather be?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/vanity/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/vanity/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/vanity/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/vanity/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/vanity/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/vanity/fg/medium.png", "animation": "out10" },
     "answers": [
       {
         "text": "Trusted",
@@ -613,10 +627,11 @@ const quiz_questions = [
   },
   {
     "question_number": 4,
+    "backgroundColor": "#49179e",
     "question": "Which of the following do you have the most trouble dealing with?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/difficulty/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/difficulty/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/difficulty/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/difficulty/bg/medium.jpg", "animation": "out15" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/difficulty/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/difficulty/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Hunger",
@@ -667,10 +682,11 @@ const quiz_questions = [
   },
   {
     "question_number": 5,
+    "backgroundColor": "#a2395a",
     "question": "If you could have a superpower, which would you choose?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/power/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/power/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/power/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/power/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/power/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/power/fg/medium.png", "animation": "in10" },
     "answers": [
       {
         "text": "Read Minds",
@@ -730,10 +746,11 @@ const quiz_questions = [
   },
   {
     "question_number": 5,
+    "backgroundColor": "",
     "question": "Which of the following would you most like to study?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Vampires",
@@ -802,10 +819,11 @@ const quiz_questions = [
   },
   {
     "question_number": 5,
+    "backgroundColor": "#191a15",
     "question": "Which subject at Hogwarts would you be most interested in studying?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/study/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Everything",
@@ -874,13 +892,14 @@ const quiz_questions = [
   },
   {
     "question_number": 6,
+    "backgroundColor": "#14505b",
     "question": "You and your friends need to cross a bridge guarded by a river troll. He insists that one of you fight him before you can cross. What do you do?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bridge/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bridge/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bridge/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bridge/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bridge/mg/medium.png", "animation": "out5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/bridge/fg/medium.png", "animation": "out10" },
     "answers": [
       {
-        "text": "Confuse the troll",
+        "text": "Attempt to confuse the troll into letting all three of you pass without fighting",
         "houseScores": {
           "gryffindor": 0,
           "slytherin": 0,
@@ -919,10 +938,11 @@ const quiz_questions = [
   },
   {
     "question_number": 6,
+    "backgroundColor": "#131f13",
     "question": "You know that a fellow House member cheated on a test. You got the second-highest grade in the class; your House mate was highest. Professor Flitwick confronts you and asks if they were cheating. What do you do?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/cheat/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/cheat/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/cheat/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/cheat/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/cheat/mg/medium.png", "animation": "in5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/cheat/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Tell Professor Flitwick the truth. If your classmate is willing to come in first by cheating, he deserves to be found out. You'll make up the House points your classmate loses by coming in first.",
@@ -964,10 +984,11 @@ const quiz_questions = [
   },
   {
     "question_number": 6,
-    "question": "Which path do you take?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/road/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/road/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/road/fg/large.png",
+    "backgroundColor": "#005458",
+    "question": "Which path tempts you most?",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/road/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/road/mg/medium.png", "animation": "in5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/road/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Twisting leafy path through the woods",
@@ -1009,10 +1030,11 @@ const quiz_questions = [
   },
   {
     "question_number": 6,
-    "question": "Which nightmare would scare you most?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/nightmare/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/nightmare/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/nightmare/fg/large.png",
+    "backgroundColor": "#222222",
+    "question": "Which nightmare would frighten you most?",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/nightmare/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/nightmare/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/nightmare/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "None of your friends or family know who you are",
@@ -1054,10 +1076,11 @@ const quiz_questions = [
   },
   {
     "question_number": 6,
+    "backgroundColor": "#021637",
     "question": "You're walking down the street late at night and hear a cry that you're fairly sure has a magical source. What do you do?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/street/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/street/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/street/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/street/bg/medium.jpg", "animation": "out15" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/street/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/street/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Withdraw into the shadows, reviewing offensive and defensive spells that might be appropriate",
@@ -1099,10 +1122,11 @@ const quiz_questions = [
   },
   {
     "question_number": 6,
+    "backgroundColor": "#051e3d",
     "question": "A Muggle approaches you and says you're a wizard. How do you react?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/muggle/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/muggle/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/muggle/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/muggle/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/muggle/mg/medium.png", "animation": "in5" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/muggle/fg/medium.png", "animation": "in15" },
     "answers": [
       {
         "text": "Ask them why they think so",
@@ -1144,10 +1168,11 @@ const quiz_questions = [
   },
   {
     "question_number": 7,
+    "backgroundColor": "#222222",
     "question": "If you were attending Hogwarts, which pet would you choose to take with you?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/pet/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/pet/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/pet/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/pet/bg/medium.jpg", "animation": "" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/pet/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/pet/fg/medium.png", "animation": "out15" },
     "answers": [
       {
         "text": "Tabby cat",
@@ -1288,10 +1313,11 @@ const quiz_questions = [
   },
   {
     "question_number": 8,
+    "backgroundColor": "#08716d",
     "question": "Black or White?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/black-white/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/black-white/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/black-white/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/black-white/bg/medium.jpg", "animation": "out10" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/black-white/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/black-white/fg/medium.png", "animation": "in5" },
     "answers": [
       {
         "text": "Black",
@@ -1315,10 +1341,11 @@ const quiz_questions = [
   },
   {
     "question_number": 8,
+    "backgroundColor": "#8d0d0c",
     "question": "Heads or Tails?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/heads-tails/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/heads-tails/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/heads-tails/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/heads-tails/bg/medium.jpg", "animation": "out10" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/heads-tails/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/heads-tails/fg/medium.png", "animation": "in5" },
     "answers": [
       {
         "text": "Heads",
@@ -1342,10 +1369,11 @@ const quiz_questions = [
   },
   {
     "question_number": 8,
+    "backgroundColor": "#ac6200",
     "question": "Left or Right?",
-    "background": "https://my.pottermore.com/assets/img/illustration/sorting-hat/left-right/bg/large.jpg",
-    "middleground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/left-right/mg/large.png",
-    "foreground": "https://my.pottermore.com/assets/img/illustration/sorting-hat/left-right/fg/large.png",
+    "background": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/left-right/bg/medium.jpg", "animation": "out10" },
+    "middleground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/left-right/mg/medium.png", "animation": "" },
+    "foreground": { "url": "https://my.pottermore.com/assets/img/illustration/sorting-hat/left-right/fg/medium.png", "animation": "in5" },
     "answers": [
       {
         "text": "Left",

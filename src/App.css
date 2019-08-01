@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Magorian Regular';
+  src: url('./assets/Magorian-web.woff') format('woff2'),
+       url('./assets/Magorian-web.woff') format('woff');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +20,7 @@ body {
   /* background: #a73737;  
   background: -webkit-linear-gradient(to right, #7a2828, #a73737);  
   background: linear-gradient(to right, #7a2828, #a73737);  */
-  background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(238,238,238,1) 50%);
+  /* background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(238,238,238,1) 50%); */
 }
 
 a {

@@ -5,7 +5,7 @@
 }
 
 .logo {
-  padding-left: 2rem;
+  padding-left: 4rem;
 }
 
 .options {
@@ -15,10 +15,10 @@
 }
 
 .options-item {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Magorian Regular', serif;
   font-weight: 600;
-  font-size: 3.5rem;
-  text-transform: uppercase;
+  font-size: 4rem;
+  text-transform: capitalize;
   padding: 10px 15px;
   cursor: pointer;
   height: auto;  
@@ -34,7 +34,7 @@
   }
 
   &:last-child {
-    margin-right: 4.5rem;
+    margin-right: 7rem;
   }
 }
 

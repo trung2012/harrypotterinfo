@@ -14,26 +14,28 @@ const Question = ({ question_number, goToNext, addPointsToHouse }) => {
 
   const questions = quiz_questions.filter(question_container => question_container.question_number === question_number);
   const displayQuestion = questions[Math.floor(Math.random() * questions.length)];
-  const { question, answers, background, middleground, foreground } = displayQuestion;
+  const { question, answers, background, middleground, foreground, backgroundColor, } = displayQuestion;
   return (
     <div className='question-and-answers-container'>
       <div className='question-container'>
         <div className='question-illustration-container'>
-          <div className='question-illustration-background' style={{ backgroundImage: `url('${background}')` }}></div>
-          <div className='question-illustration-middleground' style={{ backgroundImage: `url('${middleground}')` }}></div>
-          <div className='question-illustration-foreground' style={{ backgroundImage: `url('${foreground}')` }}></div>
+          <div className='question-illustration-background' style={{ backgroundImage: `url('${background.url}')`, animation: `${background.animation ? `${background.animation} 3s ease-in-out forwards` : 'none'} `}}></div>
+          <div className='question-illustration-middleground' style={{ backgroundImage: `url('${middleground.url}')`, animation: `${middleground.animation ? `${middleground.animation} 3s ease-in-out forwards` : 'none'} `}}></div>
+          <div className='question-illustration-foreground' style={{ backgroundImage: `url('${foreground.url}')`,  animation: `${foreground.animation ? `${foreground.animation} 3s ease-in-out forwards` : 'none'} `}}></div>
           <div className='question-content'>
             <p className='question-text'>{question}</p>
           </div>
         </div>
 
       </div>
-      <div className='answers-container' style={{ backgroundColor: '#320a6b' }}>
-        {
-          answers.map(answer => (
-            <div onClick={() => onAnswerSelect(answer.houseScores)} className='answer'>{answer.text}</div>
-          ))
-        }
+      <div className='answers-container' style={{ backgroundColor: `${backgroundColor}` }}>
+        <div className='answers'>
+          {
+            answers.map(answer => (
+              <div onClick={() => onAnswerSelect(answer.houseScores)} className='answer'>{answer.text}</div>
+            ))
+          }
+        </div>
       </div>
     </div>
   );
