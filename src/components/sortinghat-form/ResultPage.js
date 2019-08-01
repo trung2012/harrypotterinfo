@@ -4,7 +4,6 @@ import { generateHouseColor } from '../../utils/helper';
 import facebook from '../../assets/facebook.png';
 import twitter from '../../assets/twitter.png';
 import linkedin from '../../assets/linkedin.png';
-import share from '../../assets/share.png';
 
 import './ResultPage.scss';
 
@@ -21,10 +20,9 @@ const ResultPage = ({ houseName, reset, history }) => {
         <div className='result-page-share'>
           <h2 className='result-page-share-social-title'>Share your house</h2>
           <div className='result-page-share-social'>
-            <i><img alt='facebook-share' src={facebook} /></i>
-            <i><img alt='twitter-share' src={twitter} /></i>
-            <i><img alt='linkedin-share' src={linkedin} /></i>
-            <i><img alt='link-share' src={share} /></i>
+            <i><a href='https://www.facebook.com/'><img alt='facebook-share' src={facebook} /></a></i>
+            <i><a href='https://www.twitter.com/'><img alt='twitter-share' src={twitter} /></a></i>
+            <i><a href='https://www.linkedin.com/'><img alt='linkedin-share' src={linkedin} /></a></i>
           </div>
         </div>
         <div className='result-page-next-step'>

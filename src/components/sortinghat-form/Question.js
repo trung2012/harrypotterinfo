@@ -34,7 +34,9 @@ const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse }) 
         <div className='answers'>
           {
             answers.map(answer => (
-              <div key={uuid()} onClick={() => onAnswerSelect(answer.houseScores)} className='answer'>{answer.text}</div>
+              <div key={uuid()} className='answer'>
+                <p onClick={() => onAnswerSelect(answer.houseScores)}>{answer.text}</p>
+              </div>
             ))
           }
         </div>

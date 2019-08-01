@@ -963,7 +963,7 @@ const quiz_questions = [
         }
       },
       {
-        "text": "Lie and say you don't know (but hope he finds out somehow)",
+        "text": "Lie and say you don't know",
         "houseScores": {
           "gryffindor": 0,
           "slytherin": 0,

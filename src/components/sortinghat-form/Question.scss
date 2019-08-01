@@ -61,18 +61,23 @@
 
   .answers {
     .answer {
-    margin: .8rem 0;
+    margin: .5rem 0;
+    padding: .4rem 0;
     font-size: 2.3rem;
     cursor: pointer;
-    opacity: 1;    
+    opacity: 1;
+
+    p {
+      display: inline-block;
+    }
 
     &:hover {      
-      transition: all .5s ease-out;
-      transform: scale(1.1)
+      transition: all .7s ease-in-out ;
+      transform: scale(1.11);
     }
   }
 
-  }
+}
   
 }
 
