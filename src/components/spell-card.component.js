@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { mapDataToSpell } from '../utils/helper';
 import './spell-card.styles.scss';
 import placeholderImage from '../assets/wizard.jpg';
 
-const SpellCard = ({ spell, type, effect }) => {
-  const imageUrl = mapDataToSpell(spell) ? mapDataToSpell(spell).imageUrl : null;
+const SpellCard = ({ spell, type, effect, imageUrl }) => {
+  const cardStyle = (spell.toLowerCase() === 'avada kedavra' || spell.toLowerCase() === 'crucio' || spell.toLowerCase() === 'imperio') ? { backgroundColor: '#0a0a0a', color: 'white' } : null;
 
   return (
-    <div className='spell-card'>
+    <div className='spell-card' style={cardStyle}>
       <div className='spell-card-image-container'>
         {}<img src={imageUrl ? imageUrl : placeholderImage} alt='profile-pic'></img>
       </div>

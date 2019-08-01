@@ -2,31 +2,38 @@ import React from 'react';
 
 import Question from './Question';
 import WelcomePage from './Welcome';
+import ResultPage from './ResultPage';
+
+const initialState = {
+  current_question: 0,
+  gryffindor: {
+    name: 'Gryffindor',
+    score: 0
+  },
+  ravenclaw: {
+    name: 'Ravenclaw',
+    score: 0
+  },
+  slytherin: {
+    name: 'Slytherin',
+    score: 0
+  },
+  hufflepuff: {
+    name: 'Hufflepuff',
+    score: 0
+  },
+  sortResult: ''
+}
 
 class SortingHatForm extends React.Component {
-  state = {
-    current_question: 0,
-    gryffindor: {
-      name: 'Gryffindor',
-      score: 0
-    },
-    ravenclaw: {
-      name: 'Ravenclaw',
-      score: 0
-    },
-    slytherin: {
-      name: 'Slytherin',
-      score: 0
-    },
-    hufflepuff: {
-      name: 'Hufflepuff',
-      score: 0
-    },
-    sortResult: ''
-  }
+  state = initialState;
 
   goToNext = () => {
     this.setState(state => ({ current_question: state.current_question + 1 }));
+  }
+
+  reset = () => {
+    this.setState(initialState);
   }
 
   addPointsToHouse = (houseScores) => {
@@ -41,15 +48,16 @@ class SortingHatForm extends React.Component {
   sortToHouse = () => {
     const { gryffindor, ravenclaw, slytherin, hufflepuff } = this.state;
     let maxVal = Math.max(gryffindor.score, ravenclaw.score, slytherin.score, hufflepuff.score);
-    let sortResults = [gryffindor.score, ravenclaw.score, slytherin.score, hufflepuff.score].filter(house => house.score === maxVal);
+    let sortResults = [gryffindor, ravenclaw, slytherin, hufflepuff].filter(house => house.score === maxVal);
     if (sortResults.length > 1) {
       gryffindor.score += 3;
       ravenclaw.score += 2;
       hufflepuff.score += 1;
 
       maxVal = Math.max(gryffindor.score, ravenclaw.score, slytherin.score, hufflepuff.score);
-      sortResults = [gryffindor.score, ravenclaw.score, slytherin.score, hufflepuff.score].filter(house => house.score === maxVal);
+      sortResults = [gryffindor, ravenclaw.score, slytherin, hufflepuff].filter(house => house.score === maxVal);
     }
+
     this.setState({ sortResult: sortResults[0].name });
   }
 
@@ -102,6 +110,12 @@ class SortingHatForm extends React.Component {
           question_number={8}
           goToNext={this.goToNext}
           addPointsToHouse={this.addPointsToHouse}
+          sortToHouse={this.sortToHouse}
+        />
+      case 9:
+        return <ResultPage
+          houseName={this.state.sortResult}
+          reset={this.reset}
         />
       default:
         return <WelcomePage

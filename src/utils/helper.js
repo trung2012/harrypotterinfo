@@ -22,3 +22,21 @@ export const filterDataWithInput = (dataArray, searchInput) => {
     return item.name.toLowerCase().includes(searchInput.toLowerCase())
   })
 };
+
+
+export const generateHouseColor = houseName => {
+  switch (houseName.toLowerCase()) {
+    case 'gryffindor':
+      return '#8d0000';
+    case 'slytherin':
+      return '#005416';
+    case 'ravenclaw':
+      return '#004e80';
+    case 'hufflepuff':
+      return '#f2b800';
+    default:
+      return 'none';
+  }
+}
+
+
