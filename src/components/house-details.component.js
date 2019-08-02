@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchHousesStartAsync } from '../redux/house/house.actions';
-import { fetchCharactersStartAsync } from '../redux/character/character.actions';
-import CharacterCard from './character-card.component';
+import CharacterList from './characters-list.component';
 
 import { generateHouseColor } from '../utils/helper';
 
@@ -10,8 +8,9 @@ import './house-details.styles.scss';
 
 const HouseDetails = ({ houses, characters, match }) => {
   const houseToDisplay = houses.find(house => house.name.toLowerCase() === match.params.houseName.toLowerCase());
-  const { name, mascot, headOfHouse, houseGhost, values, colors, intro, members, imageUrl } = houseToDisplay;
-  const houseMembers = members.map(memberId => characters.find(character => character._id === memberId)).filter(member => member !== undefined);
+  const { name, mascot, headOfHouse, houseGhost, values, colors, intro, imageUrl } = houseToDisplay;
+  // const houseMembers = members.map(memberId => characters.find(character => character._id === memberId && character.house.toLowerCase() === name.toLowerCase())).filter(member => member !== undefined);
+  const houseMembers = characters.filter(character => character.house && character.house.toLowerCase() === name.toLowerCase());
   const houseColor = generateHouseColor(name);
   return (
     <div className='house-details-page'>
@@ -44,4 +43,4 @@ const mapStateToProps = state => ({
   characters: state.character.characters
 });
 
-export default connect(mapStateToProps, { fetchHousesStartAsync, fetchCharactersStartAsync })(HouseDetails);
+export default connect(mapStateToProps)(HouseDetails);

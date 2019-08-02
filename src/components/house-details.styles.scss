@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 5rem 13rem;
-  border: 1px solid black;
+  margin: 5rem 10%;
+  animation: slideUp 1s ease-out;
 }
 
 .house-details-header-title {
@@ -12,21 +12,24 @@
 }
 
 .house-details-header-image-container {
+  margin-bottom: 3rem;
   img {
-    width: 25rem;
+    width: 30rem;
   }
 }
 
 .house-details-header-intro {
-  font-size: 2.6rem;
-  padding: 2rem 50rem;
+  font-size: 2.7rem;
+  padding: 2rem 19%;
   text-align: justify;
   letter-spacing: .2rem;
+  line-height: 1.2;
 }
 
 .house-details-attributes {
-  font-size: 2.4rem;
-  padding: 2rem 50rem;
+  font-size: 2.6rem;
+  padding: 2rem 19%;
+  margin-left: 5.5rem;
   text-align: justify;
   letter-spacing: .2rem;
   text-transform: capitalize;
@@ -41,15 +44,13 @@
   font-size: 5rem;
 }
 
-.house-details-members-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-  
-  .characters-overview-grid-item {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(120rem);
+  }
+
+  100% {
+    transform: translate(0);
   }
 }

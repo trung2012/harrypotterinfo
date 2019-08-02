@@ -11,7 +11,8 @@
   align-items: center;
   background-color: #810041;
   color: #fff;
-  text-align: center;
+  text-align: center;  
+  animation: fadeIn 3s ease;
 }
 
 .quiz-intro-section {
@@ -76,11 +77,22 @@
   background: 0 0;
   padding: 1.3rem 2.2rem;
   font-weight: 500;
-  color: #fff;
+  color: #fff;  
+  margin: 4rem 2rem;
 }
 
 .quiz-intro-button:hover {
   background-color: #fff;
   border-color: #fff;
   color: #333;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

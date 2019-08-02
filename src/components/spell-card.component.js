@@ -1,15 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './spell-card.styles.scss';
-import placeholderImage from '../assets/wizard.jpg';
+import placeholderImage from '../assets/wand.png';
 
 const SpellCard = ({ spell, type, effect, imageUrl }) => {
-  const cardStyle = (spell.toLowerCase() === 'avada kedavra' || spell.toLowerCase() === 'crucio' || spell.toLowerCase() === 'imperio') ? { backgroundColor: '#0a0a0a', color: 'white' } : null;
+  const [watching, setWatching] = useState(false);
+
+  const cardStyle = (spell.toLowerCase() === 'avada kedavra' ||
+    spell.toLowerCase() === 'crucio' ||
+    spell.toLowerCase() === 'imperio')
+    ? { backgroundColor: '#0a0a0a', color: 'white' } : null;
+
+  const watchGif = () => {
+    if (imageUrl && imageUrl.includes('.gif')) {
+      setWatching(true);
+      setTimeout(() => setWatching(false), 4500);
+    }
+  }
 
   return (
-    <div className='spell-card' style={cardStyle}>
+    <div className='spell-card' style={cardStyle} >
       <div className='spell-card-image-container'>
-        {}<img src={imageUrl ? imageUrl : placeholderImage} alt='profile-pic'></img>
+        <img
+          src={imageUrl ? imageUrl : placeholderImage}
+          alt='profile-pic'
+          className={`spell-card-image ${watching ? 'watch' : ''} `}
+          onClick={watchGif}
+        />
       </div>
       <div className='spell-card-info'>
         <div className='spell-card-info-name'>{spell}</div>

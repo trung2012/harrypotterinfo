@@ -1,11 +1,11 @@
 .spell-card {
-  height: 50rem;  
-  width: 37rem;
-  margin: 3rem 2rem;  
-  padding: 2.2rem;
+  height: 45rem;  
+  width: 35rem;
+  margin: 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
   border-radius: .7rem;  
   border: 0.2rem solid #807d7d;
@@ -13,33 +13,38 @@
   cursor: pointer;
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: .5rem .9rem 1.2rem #666 ;
-  }
+  // &:hover {
+  //   transform: scale(1.05);
+  //   box-shadow: .5rem .9rem 1.2rem #666 ;
+  // }
 }
 
 .spell-card-image-container {
-  max-width: 32rem;  
-  margin: 1.2rem 0;
+  margin-top: 1.5rem;
+  max-width: 40rem;
   border-radius: 0.5rem;
+  text-align: center;
 
-  img {
-    max-width: 90%;
-    max-height: 30rem;
-    border: 0.1rem solid #807d7d;
-    transition: all 1s ease;
+  .spell-card-image {
+    max-width: 90%;    
+    height: 18rem;
+  }
 
-    &:hover {
-      transform: scale(1.6);
-    }
+  .watch {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: .2rem solid #747474;
+    border-radius: .2rem;
+    transition: 0.5s ease-in-out;
+    transform: translate3d(-50%,-50%,10rem) scale(2.5);
   }
 }
 
 .spell-card-info {
-  text-align: left;
+  width: 100%;
   line-height: 1.8;
-  padding: 0 3rem;
+  padding: 0 5rem;
 
   .spell-card-info-name {
     text-transform: uppercase;
@@ -53,6 +58,6 @@
     font-family: 'Magorian Regular', serif;
     font-size: 1.9rem;
     text-transform: capitalize;
+    text-align: left;
   }
 }
-
