@@ -1,14 +1,23 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import HomePage from './pages/homepage.component';
 import HousesPage from './pages/houses-page.component';
 import CharactersPage from './pages/characters-page.component';
 import SortingHatPage from './pages/sortinghat-page.component';
 import SpellsPage from './pages/spells-page.component';
+import { fetchHousesStartAsync } from './redux/house/house.actions';
+import { fetchCharactersStartAsync } from './redux/character/character.actions';
+
 import './App.css';
 
 class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchHousesStartAsync();
+    this.props.fetchCharactersStartAsync();
+  }
+
   render() {
     return (
       <div className='App'>
@@ -24,4 +33,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null, { fetchHousesStartAsync, fetchCharactersStartAsync })(App);

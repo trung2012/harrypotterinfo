@@ -3,14 +3,10 @@ import { connect } from 'react-redux';
 
 import Spinner from './spinner.component';
 import HouseOverviewItem from './houses-overview-item.component'
-import { fetchHousesStartAsync } from '../redux/house/house.actions';
+
 import './houses-overview.styles.scss';
 
 class HousesOverview extends React.Component {
-
-  componentDidMount() {
-    this.props.fetchHousesStartAsync();
-  }
 
   render() {
     const { houses, errorMessage, isLoading } = this.props;
@@ -38,4 +34,4 @@ const mapStateToProps = state => ({
   errorMessage: state.house.errorMessage
 })
 
-export default connect(mapStateToProps, { fetchHousesStartAsync })(HousesOverview);
+export default connect(mapStateToProps)(HousesOverview);

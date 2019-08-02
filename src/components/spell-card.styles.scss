@@ -1,14 +1,14 @@
 .spell-card {
-  min-height: 45rem;  
+  height: 50rem;  
   width: 37rem;
   margin: 3rem 2rem;  
-  padding: 1.8rem;
+  padding: 2.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   border-radius: .7rem;  
-  border: white .3rem solid;
+  border: 0.2rem solid #807d7d;
   box-shadow: .3rem .5rem 1rem #666 ;
   cursor: pointer;
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -20,14 +20,19 @@
 }
 
 .spell-card-image-container {
-  max-width: 35rem;  
+  max-width: 32rem;  
   margin: 1.2rem 0;
   border-radius: 0.5rem;
 
   img {
     max-width: 90%;
     max-height: 30rem;
-    border: 0.2rem solid #807d7d;
+    border: 0.1rem solid #807d7d;
+    transition: all 1s ease;
+
+    &:hover {
+      transform: scale(1.6);
+    }
   }
 }
 

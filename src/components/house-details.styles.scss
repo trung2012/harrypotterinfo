@@ -1,0 +1,55 @@
+.house-details-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 5rem 13rem;
+  border: 1px solid black;
+}
+
+.house-details-header-title {
+  font-size: 6rem;
+  margin-bottom: 5rem;
+}
+
+.house-details-header-image-container {
+  img {
+    width: 25rem;
+  }
+}
+
+.house-details-header-intro {
+  font-size: 2.6rem;
+  padding: 2rem 50rem;
+  text-align: justify;
+  letter-spacing: .2rem;
+}
+
+.house-details-attributes {
+  font-size: 2.4rem;
+  padding: 2rem 50rem;
+  text-align: justify;
+  letter-spacing: .2rem;
+  text-transform: capitalize;
+
+  .house-details-attribute {
+    margin: .8rem 0;
+  }
+}
+
+.house-details-members-title {
+  margin: 5rem 0;
+  font-size: 5rem;
+}
+
+.house-details-members-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  
+  .characters-overview-grid-item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

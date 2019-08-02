@@ -1,0 +1,12 @@
+.characters-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.characters-list-grid-item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,19 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import CharacterCard from './character-card.component';
+import CharacterList from './characters-list.component';
 import SearchBar from './searchbar.component';
 import Spinner from './spinner.component';
-import { fetchCharactersStartAsync, filterCharacters } from '../redux/character/character.actions';
+import { filterCharacters } from '../redux/character/character.actions';
 
 
 import './characters-overview.styles.scss';
 
 class CharactersOverview extends React.Component {
-
-  componentDidMount() {
-    this.props.fetchCharactersStartAsync();
-  }
 
   render() {
     const { isLoading, errorMessage, filteredCharacters, searchInput, filterCharacters } = this.props;
@@ -24,21 +20,9 @@ class CharactersOverview extends React.Component {
       <>
         {
           (
-            <div className='characters-page'>
+            <div className='characters-overview-page'>
               <SearchBar type='character' searchInput={searchInput} onInputChange={filterCharacters} />
-              <div className='characters-overview'>
-                {
-                  filteredCharacters.length ?
-                    filteredCharacters.map(({ _id, name, ...otherProps }) => {
-                      return (
-                        <div key={_id} className='characters-overview-grid-item'>
-                          <CharacterCard key={_id} name={name} {...otherProps} />
-                        </div>)
-                    }
-                    )
-                    : <h1>No Characters Found</h1>
-                }
-              </div>
+              <CharacterList filteredCharacters={filteredCharacters} />
             </div>
           )
         }
@@ -55,7 +39,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchCharactersStartAsync: () => dispatch(fetchCharactersStartAsync()),
   filterCharacters: (searchInput) => dispatch(filterCharacters(searchInput))
 })
 
