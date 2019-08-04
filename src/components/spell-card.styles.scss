@@ -10,7 +10,6 @@
   border-radius: .7rem;  
   border: 0.2rem solid #807d7d;
   box-shadow: .3rem .5rem 1rem #666 ;
-  cursor: pointer;
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
   // &:hover {
@@ -23,7 +22,8 @@
   margin-top: 1.5rem;
   max-width: 40rem;
   border-radius: 0.5rem;
-  text-align: center;
+  text-align: center;  
+  cursor: pointer;
 
   .spell-card-image {
     max-width: 90%;    
@@ -36,8 +36,8 @@
     left: 50%;
     border: .2rem solid #747474;
     border-radius: .2rem;
-    transition: 0.5s ease-in-out;
-    transform: translate3d(-50%,-50%,10rem) scale(2.5);
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(-50%,-50%,10rem) scale(2.3);
   }
 }
 
@@ -52,6 +52,11 @@
     font-weight: 700;
     font-size: 2.2rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7
+    }
   }
 
   .spell-card-info-item {

@@ -18,6 +18,10 @@ class App extends React.Component {
     this.props.fetchCharactersStartAsync();
   }
 
+  componentWillUnmount() {
+    window.localStorage.clear();
+  }
+
   render() {
     return (
       <div className='App'>

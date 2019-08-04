@@ -22,4 +22,4 @@ const CharacterList = ({ filteredCharacters }) => {
   );
 }
 
-export default CharacterList;;
+export default CharacterList;
