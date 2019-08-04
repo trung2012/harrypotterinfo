@@ -13,11 +13,10 @@ const CharacterDetails = ({ characters, match }) => {
   const {
     name, role, house, school, wand, patronus, boggart, animagus,
     ministryOfMagic, orderOfThePhoenix, dumbledoresArmy, deathEater,
-    bloodStatus, species, marital_status, nationality, alias_alternate,
+    bloodStatus, species, marital_status, nationality, alias,
     born, signature, imageUrl
   } = characterToDisplay;
   const houseColor = house ? generateHouseColor(name) : 'none';
-  console.log(Array.isArray(alias_alternate))
   return (
     <div className='character-details-page'>
       <div className='character-details-page-header'>
@@ -47,13 +46,7 @@ const CharacterDetails = ({ characters, match }) => {
         </div>
         <div className='character-details-section-content'>
           <h3 className='character-details-section-content-att'>Also known as</h3>
-          <div className='character-details-section-content-list'>
-            {
-              Array.isArray(alias_alternate) ?
-                (<ul>{alias_alternate.map(item => <li className='list-item'>{item}</li>)}</ul>)
-                : alias_alternate
-            }
-          </div>
+          <div className='character-details-section-content-list'>{alias}</div>
         </div>
         <div className='character-details-section-content'>
           <h3 className='character-details-section-content-att'></h3>
