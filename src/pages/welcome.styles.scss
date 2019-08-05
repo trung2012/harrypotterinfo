@@ -1,3 +1,7 @@
+.welcome-page-container {
+  overflow: hidden;
+}
+
 .welcome-page {
   height: 100vh;
   background-size: cover;
@@ -5,11 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   
   &:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1) translate3d(0,0,0); 
   }
 }
 
