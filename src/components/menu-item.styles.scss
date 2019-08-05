@@ -4,16 +4,18 @@
   font-size: 3.4rem;
   text-align: center;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  
 }
 
 .menu-item-image {
   height: 30rem;
-  border: #818181 solid .2rem;
+  border: #818181 solid .1rem;
   margin-bottom: .5rem;
-  transition:all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
 }

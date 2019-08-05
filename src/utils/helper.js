@@ -41,4 +41,4 @@ export const generateHouseColor = houseName => {
 
 export const findCharacterById = (id, characters) => characters.find(character => character._id === id);
 
-export const isUnknown = attribute => attribute ? attribute : 'Unknown';
+export const isUnknown = attribute => attribute ? attribute : 'N/A';
