@@ -5,7 +5,7 @@ import CharacterList from './characters-list.component';
 import SearchBar from './searchbar.component';
 import Spinner from './spinner.component';
 import { filterCharacters } from '../redux/character/character.actions';
-
+import Header from '../components/header.component';
 
 import './characters-overview.styles.scss';
 
@@ -21,6 +21,7 @@ class CharactersOverview extends React.Component {
         {
           (
             <div className='characters-overview-page'>
+              <Header />
               <SearchBar type='character' searchInput={searchInput} onInputChange={filterCharacters} />
               <CharacterList filteredCharacters={filteredCharacters} />
             </div>

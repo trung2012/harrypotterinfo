@@ -7,6 +7,7 @@ import mom from '../assets/MOM.jpg';
 import ootp from '../assets/OOTP.png';
 
 import { isUnknown, generateHouseColor } from '../utils/helper';
+import './character-details.styles.scss'
 
 const CharacterDetails = ({ characters, match }) => {
   const characterToDisplay = characters.find(character => character.name.replace(' ', '_').toLowerCase() === match.params.characterName.toLowerCase());
@@ -25,9 +26,11 @@ const CharacterDetails = ({ characters, match }) => {
 
       <div className='character-details-page-header'>
         <h1 className='character-details-title' style={houseStyle}>{name}</h1>
+        <div className='profile-pics'>
+          <img src={imageUrl} alt='character' className='display-picture' />
+          {signature ? <img src={signature} alt='character-signature' className='signature' /> : null}
+        </div>
         <div className='character-picture-container'>
-          <img src={imageUrl} alt='character' />
-          {signature ? <img src={signature} alt='character-signature' /> : null}
           {orderOfThePhoenix ? <img src={ootp} alt='Order Of The Phoenix' /> : null}
           {dumbledoresArmy ? <img src={da} alt='Dumbledore"s Army' /> : null}
           {ministryOfMagic ? <img src={mom} alt='Ministry Of Magic' /> : null}
@@ -46,7 +49,7 @@ const CharacterDetails = ({ characters, match }) => {
           <div className='character-details-section-content-list'>{isUnknown(bloodStatus)}</div>
         </div>
         <div className='character-details-section-content'>
-          <h3 className='character-details-section-content-att'>Blood Status</h3>
+          <h3 className='character-details-section-content-att'>Marital Status</h3>
           <div className='character-details-section-content-list'>{isUnknown(marital_status)}</div>
         </div>
         <div className='character-details-section-content'>
