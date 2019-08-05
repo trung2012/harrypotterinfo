@@ -2,7 +2,8 @@ import {
   FETCH_CHARACTERS_START,
   FETCH_CHARACTERS_SUCCESS,
   FETCH_CHARACTERS_FAILURE,
-  FILTER_CHARACTERS
+  FILTER_CHARACTERS,
+  RESET_SEARCH_INPUT
 } from './character.types';
 
 import charactersWithImage from '../../utils/characters_images';
@@ -26,6 +27,11 @@ export const filterCharacters = searchInput => ({
   type: FILTER_CHARACTERS,
   payload: searchInput
 });
+
+export const resetSearchInput = () => ({
+  type: RESET_SEARCH_INPUT
+});
+
 
 export const fetchCharactersStartAsync = () => dispatch => {
   dispatch(fetchCharactersStart());

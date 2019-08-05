@@ -1,20 +1,30 @@
-.characters-page {
+.character-details-page-container {
   display: flex;
   justify-content: center;
+  background-color: rgba(7, 7, 7, 0.4);
 }
 .character-details-page {
-  width: 60%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   border: 1px solid black;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  padding-bottom: 3rem;
+  margin-left: 2.5rem;
 }
 
 .character-details-page-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  margin-bottom: 3rem;
   
+  .character-details-title {
+    padding: .5rem 0;
+  }
   .profile-pics {
     margin-top: 2rem;
     display: flex;
@@ -25,29 +35,73 @@
 
     .display-picture {
       display: block;
-      border: 1px solid rgb(180, 179, 179);
+      border: .1rem solid rgb(180, 179, 179);
+      margin-bottom: 2rem;
     }
 
     .signature {
-      max-width: 25rem;
+      max-height: 10rem;
       margin: 1rem 0;
     }
+
   }  
 }
 
+.character-details-sections-container {
+  display: flex;
+  justify-content: center; 
+}
+.character-details-sections {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  border: .1rem solid black;
+}
 .character-details-section {
+  display: flex;
+  flex-direction: column;
+  .character-details-section-title {
+    display: block;
+    margin-bottom: 1rem;
+    background-color: #402b2b;
+    color: white;
+  }
   .character-details-section-content {
     display: flex;
     justify-content: center;
-    padding: .5rem 0;
-    text-align: left;
-
+    align-items: center;
+    padding: .5rem .5rem;
+    text-align: center;
+    width: 70%;
+    margin-left: 11rem;
+    
+    .character-details-section-content-att {
+      flex: 1
+    }
     .character-details-section-content-list {
       text-transform: capitalize;
+      flex: 2;
+      padding: .4rem 0;
+
+      li {
+        padding: .3rem 0;
+      }
     }
   }
 }
 
 li {
   list-style: none;
+}
+
+.back-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
 }

@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 import CharacterList from './characters-list.component';
 import SearchBar from './searchbar.component';
 import Spinner from './spinner.component';
-import { filterCharacters } from '../redux/character/character.actions';
+import { filterCharacters, resetSearchInput } from '../redux/character/character.actions';
 import Header from '../components/header.component';
 
 import './characters-overview.styles.scss';
 
 class CharactersOverview extends React.Component {
+  componentWillUnmount() {
+    this.props.resetSearchInput();
+  }
 
   render() {
     const { isLoading, errorMessage, filteredCharacters, searchInput, filterCharacters } = this.props;
@@ -40,7 +43,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  filterCharacters: (searchInput) => dispatch(filterCharacters(searchInput))
+  filterCharacters: (searchInput) => dispatch(filterCharacters(searchInput)),
+  resetSearchInput: () => dispatch(resetSearchInput())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharactersOverview);

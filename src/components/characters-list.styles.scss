@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 0 5rem;
+  animation: slideUp 1s ease-out;
 }
 
 .characters-list-grid-item {
@@ -10,12 +11,21 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation: slideUp 1s ease-out backwards;
 }
 
 @keyframes slideLeft {
   0% {
     transform: translateX(140rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-140rem);
   }
 
   100% {
