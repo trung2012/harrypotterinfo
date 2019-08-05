@@ -26,7 +26,7 @@ const characterReducer = (state = initialState, action) => {
     case FILTER_CHARACTERS:
       return { ...state, searchInput: action.payload, filteredCharacters: filterDataWithInput(state.characters, action.payload) }
     case RESET_SEARCH_INPUT:
-      return { ...state, searchInput: '' }
+      return { ...state, searchInput: '', filteredCharacters: [...state.characters] }
     default:
       return state;
   }

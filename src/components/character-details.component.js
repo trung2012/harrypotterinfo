@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import da from '../assets/DA.jpg';
@@ -7,10 +7,15 @@ import mom from '../assets/MOM.jpg';
 import ootp from '../assets/OOTP.png';
 import back from '../assets/back.png';
 
+import uuid from 'uuid';
 import { generateHouseColor } from '../utils/helper';
 import './character-details.styles.scss'
 
 const CharacterDetails = ({ characters, match, history }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   const characterToDisplay = characters.find(character => character.name.replace(' ', '_').toLowerCase() === match.params.characterName.toLowerCase());
   const {
     name, wand, patronus, boggart, animagus,
@@ -20,7 +25,7 @@ const CharacterDetails = ({ characters, match, history }) => {
     occupation, romances, house, school
   } = characterToDisplay;
 
-  const isValArray = attValue => Array.isArray(attValue) ? <ul>{attValue.map(att => (<li>{att}</li>))}</ul> : attValue;
+  const isValArray = attValue => Array.isArray(attValue) ? <ul>{attValue.map(att => (<li key={uuid()}>{att}</li>))}</ul> : attValue;
   const houseStyle = house ? { backgroundColor: `${generateHouseColor(house)}`, color: 'white' } : { backgroundColor: '#402b2b', color: 'white' };
   return (
     <div className='character-details-page-container'>
@@ -44,7 +49,7 @@ const CharacterDetails = ({ characters, match, history }) => {
         <div className='character-details-sections-container'>
           <div className='character-details-sections'>
             <div className='character-details-section'>
-              <h2 className='character-details-section-title'>Biographical Information</h2>
+              <h2 className='character-details-section-title' style={houseStyle}>Biographical Information</h2>
               {born ? <div className='character-details-section-content'>
                 <h3 className='character-details-section-content-att'>Born</h3>
                 <div className='character-details-section-content-list'>{born}</div>
@@ -77,7 +82,7 @@ const CharacterDetails = ({ characters, match, history }) => {
                 </div> : null}
             </div>
             <div className='character-details-section'>
-              <h2 className='character-details-section-title'>Physical Information</h2>
+              <h2 className='character-details-section-title' style={houseStyle}>Physical Information</h2>
               {species ?
                 <div className='character-details-section-content'>
                   <h3 className='character-details-section-content-att'>Species</h3>
@@ -106,11 +111,11 @@ const CharacterDetails = ({ characters, match, history }) => {
             </div>
 
             <div className='character-details-section'>
-              <h2 className='character-details-section-title'>Magical Characteristics</h2>
+              <h2 className='character-details-section-title' style={houseStyle}>Magical Characteristics</h2>
               {boggart ?
                 <div className='character-details-section-content'>
                   <h3 className='character-details-section-content-att'>Boggart</h3>
-                  <div className='character-details-section-content-list'>{boggart}</div>
+                  <div className='character-details-section-content-list'>{isValArray(boggart)}</div>
                 </div> : null}
               {wand ?
                 <div className='character-details-section-content'>
@@ -130,7 +135,7 @@ const CharacterDetails = ({ characters, match, history }) => {
             </div>
 
             <div className='character-details-section'>
-              <h2 className='character-details-section-title'>Affiliation</h2>
+              <h2 className='character-details-section-title' style={houseStyle}>Affiliation</h2>
               {occupation ?
                 <div className='character-details-section-content'>
                   <h3 className='character-details-section-content-att'>Occupation</h3>

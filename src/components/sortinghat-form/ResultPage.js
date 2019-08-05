@@ -27,7 +27,7 @@ const ResultPage = ({ houseName, reset, history }) => {
         </div>
         <div className='result-page-next-step'>
           <button onClick={reset} className="result-page-button">Try another one</button>
-          <button onClick={() => history.push('/')} className="result-page-button">Home</button>
+          <button onClick={() => history.push('/home')} className="result-page-button">Home</button>
         </div>
 
       </div>

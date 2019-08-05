@@ -24,6 +24,7 @@ const charactersWithImage = [
     "species": "Human",
     "gender": "Female",
     "occupation": "Professor of the Study of Ancient Runes (before 1993 - ?)",
+    "dumbledoresArmy": false,
     "imageUrl": "https://vignette.wikia.nocookie.net/harrypotter/images/2/21/ProfessorFemale.jpg/revision/latest?cb=20100824181133"
   },
   {
@@ -169,8 +170,8 @@ const charactersWithImage = [
   },
   {
     "name": "Lavender Brown",
-    "born": "between 1 September 1979 and 31 August 1980Great Britain or Ireland",
-    "died": "2 May, 1998 (aged 17/18)Hogwarts Castle, Highlands, Scotland , Great Britain",
+    "born": "between 1 September 1979 and 31 August 1980 Great Britain or Ireland",
+    "died": "2 May, 1998 (aged 17/18) Hogwarts Castle, Highlands, Scotland , Great Britain",
     "blood_status": "Pure-blood",
     "species": "Human",
     "gender": "Female",
@@ -738,6 +739,7 @@ const charactersWithImage = [
     "wand": "Unknown length, wood and core",
     "patronus": "Non-corporeal",
     "occupation": "Dealer of wizarding artifacts",
+    "orderOfThePhoenix": false,
     "imageUrl": "https://vignette.wikia.nocookie.net/harrypotter/images/e/e0/Fletcher_DH1.jpg/revision/latest?cb=20160714162019"
   },
   {

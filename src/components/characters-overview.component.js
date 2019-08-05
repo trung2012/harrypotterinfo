@@ -10,7 +10,7 @@ import Header from '../components/header.component';
 import './characters-overview.styles.scss';
 
 class CharactersOverview extends React.Component {
-  componentWillUnmount() {
+  componentDidMount() {
     this.props.resetSearchInput();
   }
 

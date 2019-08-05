@@ -79,13 +79,15 @@
   font-weight: 500;
   color: #fff;  
   margin: 4rem 2rem;
+
+  &:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #333;
+  }
 }
 
-.quiz-intro-button:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #333;
-}
+  
 
 @keyframes fadeIn {
   0% {

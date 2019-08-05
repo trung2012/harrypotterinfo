@@ -1,0 +1,29 @@
+.welcome-page {
+  height: 100vh;
+  background-size: cover;
+  background-image: url('../assets/background.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  
+  &:hover {
+    transform: scale(1.1); 
+  }
+}
+
+.go-to-homepage {
+  opacity: 0; 
+  font-size: 3rem;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  display: block;
+  text-decoration: none;
+  transition: all .5s;
+  cursor: pointer;
+  color: #b8b5b5;
+  transform: translateY(-6rem);
+
+}

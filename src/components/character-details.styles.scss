@@ -1,20 +1,24 @@
 .character-details-page-container {
   display: flex;
   justify-content: center;
-  background-color: rgba(7, 7, 7, 0.4);
+  background-color: rgba(85, 74, 74, 0.4);
 }
 .character-details-page {
+  z-index: 10;
   width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: 1px solid black;
+  border: .1rem solid #666;
   margin-top: 3rem;
   margin-bottom: 1rem;
   background-color: white;
   padding-bottom: 3rem;
   margin-left: 2.5rem;
+  font-size: 1.7rem;
+  box-shadow: .3rem .5rem 1rem #666;
+  animation: slideUp .3s ease-out;
 }
 
 .character-details-page-header {
@@ -40,7 +44,7 @@
     }
 
     .signature {
-      max-height: 10rem;
+      max-height: 8rem;
       margin: 1rem 0;
     }
 
@@ -51,6 +55,7 @@
   display: flex;
   justify-content: center; 
 }
+
 .character-details-sections {
   display: flex;
   justify-content: center;
@@ -58,14 +63,23 @@
   width: 70%;
   border: .1rem solid black;
 }
+
 .character-details-section {
   display: flex;
   flex-direction: column;
+
+  &:empty {
+    display: none;
+  }
+
   .character-details-section-title {
     display: block;
+    padding: .3rem 0;
     margin-bottom: 1rem;
-    background-color: #402b2b;
-    color: white;
+
+    &:only-child {
+      display: none;
+    }
   }
   .character-details-section-content {
     display: flex;
@@ -75,12 +89,16 @@
     text-align: center;
     width: 70%;
     margin-left: 11rem;
+    margin-bottom: .3rem;
     
     .character-details-section-content-att {
-      flex: 1
+      flex: 1;
+      padding: 0 .5rem;
+      text-align: left;
     }
     .character-details-section-content-list {
       text-transform: capitalize;
+      text-align: left;
       flex: 2;
       padding: .4rem 0;
 
@@ -97,11 +115,15 @@ li {
 
 .back-button {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
+  top: 2rem;
+  left: 2rem;
   cursor: pointer;
 
   &:hover {
     opacity: .8;
+  }
+
+  &:active {
+    transform: translateY(5%);
   }
 }

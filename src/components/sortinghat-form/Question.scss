@@ -69,12 +69,11 @@
 
     p {
       display: inline-block;
-    }
-
-    &:hover {      
-      transition: all .7s ease-in-out ;
-      transform: scale(1.11);
-    }
+      transition: all .8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      &:hover {      
+        transform: scale(1.11) translate3d(0,0,0);
+      }
+    }   
   }
 
 }
