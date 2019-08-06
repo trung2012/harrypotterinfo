@@ -56,7 +56,7 @@ const charactersWithImage = [
   },
   {
     "name": "Katie Bell",
-    "born": "between 1 September 1978 and 31 August 1979Great Britain or Ireland",
+    "born": "between 1 September 1978 and 31 August 1979 Great Britain or Ireland",
     "blood_status": "Pure-blood or half-blood",
     "nationality": "British or Irish",
     "titles": "Chaser",
@@ -101,7 +101,7 @@ const charactersWithImage = [
   {
     "name": "Regulus Black",
     "born": "1961  Great Britain",
-    "died": "1979  (aged 18)The Cave, Great Britain",
+    "died": "1979  (aged 18) The Cave, Great Britain",
     "blood_status": "Pure-blood",
     "marital_status": "Single",
     "nationality": "English",
@@ -206,7 +206,7 @@ const charactersWithImage = [
   {
     "name": "Charity Burbage",
     "born": "Before 1976",
-    "died": "Late July,  1997Malfoy Manor, Wiltshire, England, Great Britain",
+    "died": "Late July,  1997 Malfoy Manor, Wiltshire, England, Great Britain",
     "blood_status": "Pure-blood or half-blood (possibly)",
     "marital_status": "Single",
     "nationality": "British",

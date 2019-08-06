@@ -20,7 +20,7 @@ const CharacterDetails = ({ characters, match, history }) => {
   const {
     name, wand, patronus, boggart, animagus,
     ministryOfMagic, orderOfThePhoenix, dumbledoresArmy, deathEater,
-    bloodStatus, species, marital_status, nationality, alias,
+    blood_status, species, marital_status, nationality, alias,
     born, signature, imageUrl, titles, gender, hair_colour, eye_colour, skin_colour,
     occupation, romances, house, school
   } = characterToDisplay;
@@ -54,9 +54,9 @@ const CharacterDetails = ({ characters, match, history }) => {
                 <h3 className='character-details-section-content-att'>Born</h3>
                 <div className='character-details-section-content-list'>{born}</div>
               </div> : null}
-              {bloodStatus ? <div className='character-details-section-content'>
+              {blood_status ? <div className='character-details-section-content'>
                 <h3 className='character-details-section-content-att'>Blood Status</h3>
-                <div className='character-details-section-content-list'>{bloodStatus}</div>
+                <div className='character-details-section-content-list'>{blood_status}</div>
               </div> : null}
               {marital_status ?
                 <div className='character-details-section-content'>
