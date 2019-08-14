@@ -411,7 +411,7 @@ const charactersWithImage = [
   },
   {
     "name": "John Dawlish",
-    "born": "Between 1877 and 1975 ,Great Britain or Ireland",
+    "born": "Between 1877 and 1975, Great Britain or Ireland",
     "blood_status": "Pure-blood or Half-blood",
     "nationality": "British",
     "species": "Human",
