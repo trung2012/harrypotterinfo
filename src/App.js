@@ -6,10 +6,12 @@ import WelcomePage from './pages/welcome.component';
 import HomePage from './pages/homepage.component';
 import HousesPage from './pages/houses-page.component';
 import CharactersPage from './pages/characters-page.component';
-import SortingHatPage from './pages/sortinghat-page.component';
 import SpellsPage from './pages/spells-page.component';
+import SortingHatForm from './components/sortinghat-form/sortinghat-form.component';
+import SortingHatFullForm from './components/sortinghat-form/sortinghat-form-full.component';
 import { fetchHousesStartAsync } from './redux/house/house.actions';
 import { fetchCharactersStartAsync } from './redux/character/character.actions';
+
 
 import './App.css';
 
@@ -32,7 +34,8 @@ class App extends React.Component {
           <Route path='/characters' component={CharactersPage} />
           <Route path='/houses' component={HousesPage} />
           <Route path='/spells' component={SpellsPage} />
-          <Route exact path='/sortinghat' component={SortingHatPage} />
+          <Route exact path='/sortinghat' component={SortingHatForm} />
+          <Route exact path='/sortinghat/full' component={SortingHatFullForm} />
         </Switch>
       </div>
     );

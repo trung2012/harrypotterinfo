@@ -3,7 +3,7 @@ import React from 'react';
 import Question from './Question';
 import WelcomePage from './Welcome';
 import ResultPage from './ResultPage';
-import quiz_questions from '../../utils/quiz_questions';
+import quiz_questions from '../../utils/quiz_questions_full';
 
 const initialState = {
   current_question: 0,
@@ -26,7 +26,7 @@ const initialState = {
   sortResult: ''
 }
 
-class SortingHatForm extends React.Component {
+class SortingHatFullForm extends React.Component {
   state = initialState;
 
   goToNext = () => {
@@ -64,17 +64,17 @@ class SortingHatForm extends React.Component {
 
   render() {
     const { current_question } = this.state;
-    if (current_question === 0) return <WelcomePage goToNext={this.goToNext} quizType='normal' />;
-    if (current_question > 8) return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
+    if (current_question === 0) return <WelcomePage goToNext={this.goToNext} quizType='full' />;
+    if (current_question > 28) return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
     return <Question
       question_number={current_question}
       goToNext={this.goToNext}
       addPointsToHouse={this.addPointsToHouse}
       quiz_questions={quiz_questions}
       sortToHouse={this.sortToHouse}
-      quizType='normal'
+      quizType='full'
     />
   }
 }
 
-export default SortingHatForm;
+export default SortingHatFullForm;

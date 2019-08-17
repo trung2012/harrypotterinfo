@@ -1,16 +1,16 @@
 import React from 'react';
 
 import uuid from 'uuid/v4';
-import quiz_questions from '../../utils/quiz_questions';
 import './Question.scss';
 
 
 
-const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse }) => {
+const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse, quiz_questions, quizType }) => {
 
   const onAnswerSelect = (houseScores) => {
     addPointsToHouse(houseScores);
-    if (question_number === 8) sortToHouse();
+    if (quizType === 'normal' && question_number === 8) sortToHouse();
+    if (quizType === 'full' && question_number === 28) sortToHouse();
     goToNext();
   }
 

@@ -7,8 +7,8 @@ const WelcomePage = ({ history }) => {
     <div className='welcome-page-container'>
       <div className='welcome-page'>
         <div onClick={() => history.push('/home')} className="go-to-homepage">Get started</div>
-        <audio src={themeSong} autoPlay />
       </div>
+      <audio src={themeSong} preload='auto' autoPlay />
     </div>
   );
 }
