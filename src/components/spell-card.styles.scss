@@ -1,6 +1,6 @@
 .spell-card {
-  height: 36rem;  
-  width: 29rem;
+  height: 38rem;  
+  width: 31rem;
   margin: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -51,8 +51,8 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
     cursor: pointer;
 
     &:hover {
@@ -62,7 +62,7 @@
 
   .spell-card-info-item {
     font-family: 'Magorian Regular', serif;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     text-transform: capitalize;
     text-align: left;
   }
