@@ -8,7 +8,7 @@ import HousesPage from './pages/houses-page.component';
 import CharactersPage from './pages/characters-page.component';
 import SpellsPage from './pages/spells-page.component';
 import SortingHatForm from './components/sortinghat-form/sortinghat-form.component';
-import SortingHatFullForm from './components/sortinghat-form/sortinghat-form-full.component';
+import SortingHatFullForm from './components/sortinghat-form/sortinghat-full-form.component';
 import { fetchHousesStartAsync } from './redux/house/house.actions';
 import { fetchCharactersStartAsync } from './redux/character/character.actions';
 

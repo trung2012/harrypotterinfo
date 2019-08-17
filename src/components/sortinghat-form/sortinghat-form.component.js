@@ -1,9 +1,11 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Question from './Question';
 import WelcomePage from './Welcome';
 import ResultPage from './ResultPage';
 import quiz_questions from '../../utils/quiz_questions';
+import quiz_questions_full from '../../utils/quiz_questions_full';
 
 const initialState = {
   current_question: 0,
@@ -63,18 +65,21 @@ class SortingHatForm extends React.Component {
   }
 
   render() {
+    const quizType = this.props.match.path === '/sortinghat' ? 'normal' : 'full'
+    const questions = this.props.match.path === '/sortinghat' ? quiz_questions : quiz_questions_full
     const { current_question } = this.state;
-    if (current_question === 0) return <WelcomePage goToNext={this.goToNext} quizType='normal' />;
-    if (current_question > 8) return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
+    if (current_question === 0) return <WelcomePage goToNext={this.goToNext} quizType={quizType} />;
+    if (current_question > 8 && quizType === 'normal') return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
+    if (current_question > 28 && quizType === 'full') return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
     return <Question
       question_number={current_question}
       goToNext={this.goToNext}
       addPointsToHouse={this.addPointsToHouse}
-      quiz_questions={quiz_questions}
+      quiz_questions={questions}
       sortToHouse={this.sortToHouse}
-      quizType='normal'
+      quizType={quizType}
     />
   }
 }
 
-export default SortingHatForm;
+export default withRouter(SortingHatForm);

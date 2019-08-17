@@ -6,7 +6,6 @@ import './Question.scss';
 
 
 const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse, quiz_questions, quizType }) => {
-
   const onAnswerSelect = (houseScores) => {
     addPointsToHouse(houseScores);
     if (quizType === 'normal' && question_number === 8) sortToHouse();

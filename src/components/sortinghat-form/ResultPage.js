@@ -10,28 +10,34 @@ import './ResultPage.scss';
 const ResultPage = ({ houseName, reset, history }) => {
   const houseColor = generateHouseColor(houseName);
 
-  return (
-    <div className='result-page' style={{ backgroundColor: `${houseColor}` }}>
-      <div className='result-container'>
-        <div className='result-page-result'>
-          <h2 className='result-page-house-name'>{houseName}</h2>
-          <p>Congratulations on being sorted into {houseName}</p>
-        </div>
-        <div className='result-page-share'>
-          <h2 className='result-page-share-social-title'>Share your house</h2>
-          <div className='result-page-share-social'>
-            <i><a href='https://www.facebook.com/'><img alt='facebook-share' src={facebook} /></a></i>
-            <i><a href='https://www.twitter.com/'><img alt='twitter-share' src={twitter} /></a></i>
-            <i><a href='https://www.linkedin.com/'><img alt='linkedin-share' src={linkedin} /></a></i>
-          </div>
-        </div>
-        <div className='result-page-next-step'>
-          <button onClick={reset} className="result-page-button">Try another one</button>
-          <button onClick={() => history.push('/home')} className="result-page-button">Home</button>
-        </div>
 
+  return (
+    houseName ?
+      <div className='result-page' style={{ backgroundColor: `${houseColor}` }}>
+        <div className='result-container'>
+          <div className='result-page-result'>
+            <h2 className='result-page-house-name'>{houseName}</h2>
+            <p>Congratulations on being sorted into {houseName}</p>
+          </div>
+          <div className='result-page-share'>
+            <h2 className='result-page-share-social-title'>Share your house</h2>
+            <div className='result-page-share-social'>
+              <i><a href='https://www.facebook.com/'><img alt='facebook-share' src={facebook} /></a></i>
+              <i><a href='https://www.twitter.com/'><img alt='twitter-share' src={twitter} /></a></i>
+              <i><a href='https://www.linkedin.com/'><img alt='linkedin-share' src={linkedin} /></a></i>
+            </div>
+          </div>
+          <div className='result-page-next-step'>
+            <button onClick={reset} className="result-page-button">Try another one</button>
+            <button onClick={() => history.push('/home')} className="result-page-button">Home</button>
+          </div>
+
+        </div>
       </div>
-    </div>
+      : <div className='result-container'>
+        <h1 className='result-page-house-name' style={{ color: 'red' }}>Something went wrong</h1>
+        <button onClick={() => history.push('/home')} className="result-page-button" style={{ color: 'white', backgroundColor: 'red', margin: 'auto' }}>Go to home</button>
+      </div>
   );
 }
 
