@@ -20,6 +20,7 @@
 
 .spell-card-image-container {
   margin-top: .5rem;
+  margin: .5rem 1.5rem;
   max-width: 32rem;
   border-radius: 0.5rem;
   text-align: center;  
@@ -28,7 +29,6 @@
   .spell-card-image {
     max-width: 100%;    
     height: 16rem;
-    padding: 0 1.5rem;
   }
 
   .watch {
