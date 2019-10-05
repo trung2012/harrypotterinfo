@@ -36,6 +36,7 @@ class App extends React.Component {
           <Route path='/spells' component={SpellsPage} />
           <Route exact path='/sortinghat' component={SortingHatForm} />
           <Route exact path='/sortinghat/full' component={SortingHatFullForm} />
+          <Redirect to='/' />
         </Switch>
       </div>
     );
