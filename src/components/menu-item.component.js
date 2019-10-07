@@ -8,8 +8,8 @@ const MenuItem = ({ title, imageUrl, pathUrl, history }) => {
     <div className='menu-item' onClick={() => history.push(`/${pathUrl}`)}>
       <div className='menu-item-image-container'>
         <img alt='section' src={imageUrl} className='menu-item-image' />
-        <div className='title'>{title}</div>
       </div>
+      <div className='title'>{title}</div>
     </div>
   );
 }
