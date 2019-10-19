@@ -18,7 +18,19 @@
   }
 }
 
+
 @media screen and (max-width: 800px) {
+  .menu-item {    
+    font-size: 250%;
+    
+    .menu-item-image {
+      height: auto;
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
   .menu-item {    
     padding: 0 1rem;
     font-size: 150%;

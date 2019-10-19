@@ -38,7 +38,41 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width:800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+  .options {
+    display: flex;
+    justify-content: center;
+  }
+
+  .options-item {
+    font-size: 200%;
+    &:last-child {
+      margin-right: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
   .header {
     display: flex;
     flex-direction: column;

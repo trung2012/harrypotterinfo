@@ -28,5 +28,41 @@
   cursor: pointer;
   color: #b8b5b5;
   transform: translateY(-6rem);
+}
 
+
+@media screen and (max-width: 800px) {
+  .welcome-page-container {
+    overflow: hidden;
+  }
+  
+  .welcome-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-position: center;
+    
+    &:hover {
+      transform: unset;
+    }
+  }
+  
+  .go-to-homepage {
+    position: absolute;
+    top: 30%;
+    opacity: 0; 
+    font-size: 3rem;
+    height: 10rem;
+    width: unset;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
+    text-decoration: none;
+    transition: all .5s;
+    cursor: pointer;
+    color: #b8b5b5;
+    transform: unset;  
+  } 
 }
