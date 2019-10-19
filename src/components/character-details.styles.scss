@@ -99,7 +99,7 @@
     .character-details-section-content-list {
       text-transform: capitalize;
       text-align: left;
-      flex: 2;
+      flex: 1;
       padding: .4rem 0;
 
       li {
@@ -206,7 +206,7 @@ li {
     }
     .character-details-section-content {
       display: flex;
-      justify-content: center;
+      justify-content: stretch;
       align-items: center;
       padding: .5rem 1rem;
       text-align: center;
