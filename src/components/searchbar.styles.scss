@@ -12,3 +12,25 @@
   font-size: 2rem;
   font-family: 'Magorian Regular', serif
 }
+
+
+@media screen and (max-width: 800px) {
+  .search-bar {  
+    margin-bottom: 2rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    top: 18%;
+    background-color: #fff;
+  }
+  
+  .search-input {  
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    border: .1rem solid #c5c5c5;
+    font-size: 110%;
+  }  
+}

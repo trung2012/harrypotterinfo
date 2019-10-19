@@ -5,6 +5,7 @@
   height: 100vh;
   width: 100%;
   color: white;
+  background-color: #1a1a1a;
   font-family: 'Magorian Regular', serif;
 }
 
@@ -241,4 +242,49 @@
       -webkit-transform: scale(1.2);
       transform: scale(1.2)
   }
+}
+
+
+@media screen and (max-width: 800px) {
+  .question-and-answers-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .question-container {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    flex: 1;
+  }  
+  
+  .question-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3rem;
+    right: 3rem;
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  
+  .answers-container {
+    padding: 1rem 1rem;
+  
+    .answers {
+      .answer {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+  }
+    
+  } 
 }

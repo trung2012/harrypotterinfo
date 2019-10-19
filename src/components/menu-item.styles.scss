@@ -17,3 +17,15 @@
     transform: scale(1.03) translate3d( 0, 0, 0);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .menu-item {    
+    padding: 0 1rem;
+    font-size: 150%;
+    
+    .menu-item-image {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

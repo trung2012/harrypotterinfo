@@ -30,7 +30,7 @@ class SpellsOverview extends React.Component {
           <div className='spell-description'>
             <h1 className='spell-description-header'>Spells</h1>
             <p className='spell-description-content'>
-              A spell is a controlled manifestation of magic that that affects the world in a supernatural fashion, such as levitating objects, conjuring fire or water, or stunning an individual.
+              A spell is a controlled manifestation of magic that affects the world in a supernatural fashion, such as levitating objects, conjuring fire or water, or stunning an individual.
               Generally cast by a witch or a wizard, spells are often produced with an incantation, and may appear as jets of light.
               Because of this spells can usually miss, be dodged, or blocked, either with an object or another spell.
               The action of performing a spell is referred to as casting or spellwork.

@@ -1,5 +1,6 @@
 .spells-page {
   font-family: 'Magorian Regular', serif;
+  margin-bottom: 6rem;
 }
 .spells-page-header {
   display: grid;
@@ -49,4 +50,72 @@
   align-items: center;
   text-align: center;
   margin: 1rem 3rem;
+}
+
+
+@media screen and (max-width: 800px) {
+  .spells-page {
+    margin-bottom: 3rem;
+  }
+  .spells-page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .spell-description {
+    line-height: 1;
+    padding: .5rem 1rem;
+  
+    .spell-description-header {
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 2.5rem;
+    }
+  
+    .spell-description-content {
+      font-size: 2rem;
+      margin: 1rem 1rem;
+      text-align: center;
+      letter-spacing: .2rem;
+    }
+  }
+  
+  .spells-video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 95%;
+    text-align: center;
+    margin: 2rem .5rem;
+  
+    .spells-video-header {
+      margin-bottom: 3rem;
+      width: 100%;
+    }
+
+    iframe {
+      height: auto;
+      width: 100%;
+    }
+  }
+  
+  .spells-overview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+  
+  .spells-overview-grid-item {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0;
+  }
 }

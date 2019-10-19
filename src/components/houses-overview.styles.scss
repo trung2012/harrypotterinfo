@@ -29,3 +29,37 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .houses-overview {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 0 2rem;
+  }
+  
+  .house {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    animation: fadeIn .25s ease-in-out;
+    margin-bottom: 2rem;
+  }
+  
+  .house-image-container {
+    margin-bottom: 1rem;
+    transition:all .5s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.03);
+    }
+    
+    .house-image {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  } 
+}

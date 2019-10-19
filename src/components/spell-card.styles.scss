@@ -11,11 +11,6 @@
   border: 0.2rem solid #807d7d;
   box-shadow: .3rem .5rem 1rem #666 ;
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-
-  // &:hover {
-  //   transform: scale(1.05);
-  //   box-shadow: .5rem .9rem 1.2rem #666 ;
-  // }
 }
 
 .spell-card-image-container {
@@ -23,23 +18,26 @@
   margin: .5rem 1.5rem;
   max-width: 32rem;
   border-radius: 0.5rem;
-  text-align: center;  
+  text-align: center;
   cursor: pointer;
+}
+.spell-card-image {
+  max-width: 100%;    
+  height: 16rem;
+}
 
-  .spell-card-image {
-    max-width: 100%;    
-    height: 16rem;
-  }
-
-  .watch {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    border: .2rem solid #747474;
-    border-radius: .2rem;
-    transition: all 0.5s ease-in-out;
-    transform: translate3d(-50%,-50%,10rem) scale(2.3);
-  }
+.watch {
+  position: fixed;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+  top: 42%;
+  margin-left: auto;
+  margin-right: auto;
+  border: .2rem solid #747474;
+  border-radius: .2rem;
+  transition: all 0.5s ease-in-out;
+  transform: scale(2.8);
+  transform-origin: center;
 }
 
 .spell-card-info {
@@ -66,4 +64,63 @@
     text-transform: capitalize;
     text-align: left;
   }
+}
+
+
+@media screen and (max-width: 800px) {
+  .spell-card {
+    height: auto;  
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+  
+  .spell-card-image-container {
+    margin: .5rem 1rem;
+    width: 100%;
+  }
+  .spell-card-image {
+    width: 100%;    
+    height: 16rem;
+  }
+  
+  .watch {
+    left: 0;
+    right: 0;
+    top: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: unset;
+  }
+  
+  .spell-card-info {
+    width: 100%;
+    line-height: 1.5;
+    padding: 0 3.5rem;
+  
+    .spell-card-info-name {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: 0.7
+      }
+    }
+  
+    .spell-card-info-item {
+      font-family: 'Magorian Regular', serif;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      text-align: left;
+    }
+  } 
 }

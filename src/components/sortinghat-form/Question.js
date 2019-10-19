@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import uuid from 'uuid/v4';
 import './Question.scss';
@@ -6,6 +6,10 @@ import './Question.scss';
 
 
 const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse, quiz_questions, quizType }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   const onAnswerSelect = (houseScores) => {
     addPointsToHouse(houseScores);
     if (quizType === 'normal' && question_number === 8) sortToHouse();

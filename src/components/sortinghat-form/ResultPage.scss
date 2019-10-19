@@ -9,7 +9,7 @@
   font-family: 'Magorian Regular', serif;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   text-align: center;
   flex-direction: column;
   color: #fff;
@@ -68,3 +68,58 @@
   border-color: #fff;
   color: #333;
 }
+
+
+@media screen and (max-width: 800px) {
+  .result-page {
+    animation: fadeIn 3s ease;
+  }
+  
+  .result-container {
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+  }
+  
+  .result-page-result {
+    margin-bottom: 2rem; 
+    p {
+      font-size: 140%;
+      margin: 0 1rem;
+    }
+  }
+  
+  .result-page-house-name {
+    font-size: 5rem;
+    padding-top: 2rem;
+  }
+  
+  .result-page-share-social-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .result-page-share-social {
+    display: inline-block;
+    
+    i {
+      padding: 0 .8rem;
+      cursor: pointer;
+  
+      img {
+        width: 3.5rem;
+      }
+    }
+  }
+  
+  .result-page-button {
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 1.5rem 1rem;
+    background: 0 0;
+    padding: 1.3rem 1.8rem;
+  }
+} 
