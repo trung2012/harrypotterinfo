@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './spell-card.styles.scss';
-import placeholderImage from '../assets/wand.png';
+import placeholderImage from '../assets/spell.png';
 
 const SpellCard = ({ spell, type, effect, imageUrl }) => {
   const [watching, setWatching] = useState(false);

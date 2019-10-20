@@ -24,7 +24,7 @@ const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse, qu
     <div className='question-and-answers-container'>
       <div className='question-container'>
         <div className='question-illustration-container'>
-          <div className='question-illustration-background' style={{ backgroundImage: `url('${background.url}')`, animation: `${background.animation ? `${background.animation} 3s ease-in-out forwards` : 'none'} ` }}></div>
+          <div className='question-illustration-background' style={{ backgroundImage: `url(${background.url})`, animation: `${background.animation ? `${background.animation} 3s ease-in-out forwards` : 'none'} ` }}></div>
           <div className='question-illustration-middleground' style={{ backgroundImage: `url('${middleground.url}')`, animation: `${middleground.animation ? `${middleground.animation} 3s ease-in-out forwards` : 'none'} ` }}></div>
           <div className='question-illustration-foreground' style={{ backgroundImage: `url('${foreground.url}')`, animation: `${foreground.animation ? `${foreground.animation} 3s ease-in-out forwards` : 'none'} ` }}></div>
           <div className='question-content'>
