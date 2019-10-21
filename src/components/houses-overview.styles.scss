@@ -63,3 +63,14 @@
     }
   } 
 }
+
+@media screen and (max-width: 800px) {
+  .house{    
+    font-size: 5rem;
+  }
+
+  .menu-item-image {
+    height: auto;
+    width: 90%;
+  }
+}

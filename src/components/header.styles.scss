@@ -66,14 +66,14 @@
   }
 
   .options-item {
-    font-size: 200%;
+    font-size: 160%;
     &:last-child {
       margin-right: unset;
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .header {
     display: flex;
     flex-direction: column;

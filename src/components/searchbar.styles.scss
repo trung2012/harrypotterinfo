@@ -15,10 +15,10 @@
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1184px) {
   .search-bar {  
     margin-bottom: 2rem;
-    width: 90%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     position: sticky;
@@ -34,4 +34,11 @@
     border: .1rem solid #c5c5c5;
     font-size: 110%;
   }  
+}
+
+@media screen and (max-width: 800px) {
+  .search-bar {  
+    margin-bottom: 2rem;
+    width: 90%;
+  }
 }

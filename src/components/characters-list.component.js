@@ -10,10 +10,7 @@ const CharacterList = ({ filteredCharacters }) => {
       {
         filteredCharacters.length ?
           filteredCharacters.map(({ _id, name, ...otherProps }) => {
-            return (
-              <div key={_id} className='characters-list-grid-item'>
-                <CharacterCard key={_id} name={name} {...otherProps} />
-              </div>)
+            return <CharacterCard key={_id} name={name} {...otherProps} />
           }
           )
           : <h1>No Characters Found</h1>

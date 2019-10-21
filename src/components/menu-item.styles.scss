@@ -21,23 +21,23 @@
 
 @media screen and (max-width: 800px) {
   .menu-item {    
-    font-size: 250%;
-    
-    .menu-item-image {
-      height: auto;
-      width: 90%;
-    }
+    font-size: 4rem;
+  }
+
+  .menu-item-image {
+    height: auto;
+    width: 90%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .menu-item {    
     padding: 0 1rem;
-    font-size: 150%;
-    
-    .menu-item-image {
-      height: auto;
-      width: 100%;
-    }
+    font-size: 160%;
+  }
+
+  .menu-item-image {
+    height: auto;
+    width: 100%;
   }
 }
