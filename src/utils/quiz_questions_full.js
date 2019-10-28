@@ -225,9 +225,9 @@ const quiz_questions = [
     "question_number": 7,
     "backgroundColor": "#3c8155",
     "question": "If you could make a potion that would guarantee you one thing, what would it be?",
-    "background": { "url": "https://i.ibb.co/8gBS9g8/potion-bg.jpg", "animation": "" },
+    "background": { "url": "https://i.ibb.co/8gBS9g8/potion-bg.jpg", "animation": "in10" },
     "middleground": { "url": "https://i.ibb.co/zbSH13N/potion-mg.png", "animation": "" },
-    "foreground": { "url": "https://i.ibb.co/m5ZV848/potion-fg.png", "animation": "out15" },
+    "foreground": { "url": "https://i.ibb.co/m5ZV848/potion-fg.png", "animation": "" },
     "answers": [
       {
         "text": "Love",

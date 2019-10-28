@@ -70,15 +70,12 @@
   
     .spell-description-header {
       text-align: center;
-      font-size: 4rem;
+      font-size: 6rem;
       margin-bottom: 2.5rem;
     }
   
     .spell-description-content {
-      font-size: 2rem;
-      margin: 1rem 1rem;
-      text-align: justify;
-      letter-spacing: .2rem;
+      display: none;
     }
   }
   
@@ -87,11 +84,7 @@
     .spells-video-header {
       text-align: center;
       margin-bottom: 3rem;
-      width: 100%;
-    }
-
-    iframe {
-      width: 100%;
+      width: 90%;
     }
   }
   
@@ -103,3 +96,19 @@
     padding: 0 1rem;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .spell-description {
+    line-height: 1;
+    padding: .5rem 5rem;
+  
+    .spell-description-header {
+      margin-bottom: 1rem;
+    }
+  } 
+  .spells-video {
+    width: 90%;
+    height: 35vh;
+  }
+}
+

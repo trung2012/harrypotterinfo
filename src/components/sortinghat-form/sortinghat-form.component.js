@@ -68,6 +68,7 @@ class SortingHatForm extends React.Component {
     const quizType = this.props.match.path === '/sortinghat' ? 'normal' : 'full'
     const questions = this.props.match.path === '/sortinghat' ? quiz_questions : quiz_questions_full
     const { current_question } = this.state;
+    const current_questions = questions.filter(question_container => question_container.question_number === current_question);
     if (current_question === 0) return <WelcomePage goToNext={this.goToNext} quizType={quizType} />;
     if (current_question > 8 && quizType === 'normal') return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
     if (current_question > 28 && quizType === 'full') return <ResultPage houseName={this.state.sortResult} reset={this.reset} />;
@@ -75,7 +76,7 @@ class SortingHatForm extends React.Component {
       question_number={current_question}
       goToNext={this.goToNext}
       addPointsToHouse={this.addPointsToHouse}
-      quiz_questions={questions}
+      quiz_questions={current_questions}
       sortToHouse={this.sortToHouse}
       quizType={quizType}
     />

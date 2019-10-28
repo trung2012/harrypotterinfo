@@ -17,8 +17,7 @@ const Question = ({ question_number, goToNext, addPointsToHouse, sortToHouse, qu
     goToNext();
   }
 
-  const questions = quiz_questions.filter(question_container => question_container.question_number === question_number);
-  const displayQuestion = questions[Math.floor(Math.random() * questions.length)];
+  const displayQuestion = quiz_questions[Math.floor(Math.random() * quiz_questions.length)];
   const { question, answers, background, middleground, foreground, backgroundColor, } = displayQuestion;
   return (
     <div className='question-and-answers-container'>

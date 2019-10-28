@@ -34,7 +34,7 @@ class SpellsOverview extends React.Component {
               Generally cast by a witch or a wizard, spells are often produced with an incantation, and may appear as jets of light.
               Because of this spells can usually miss, be dodged, or blocked, either with an object or another spell.
               The action of performing a spell is referred to as casting or spellwork.
-                    </p>
+              </p>
           </div>
           <div className='spells-video-container'>
             <h3 className='spells-video-header'>Watch all spells from the Harry Potter movies</h3>

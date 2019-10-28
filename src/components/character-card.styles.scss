@@ -41,45 +41,15 @@
   font-size: 2.5rem;
 }
 
+@media screen and (max-width: 800px) {
+  .character-card {
+    margin: 3rem 2rem;
+  }
+}
 
-// .character-card {
-//   min-height: 33rem;  
-//   width: 24rem;
-//   margin: 3rem 3rem;  
-//   padding: 1.8rem;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   text-align: center;
-//   border-radius: .7rem;  
-//   border: #e2e2e2 .3rem solid;
-//   box-shadow: .3rem .5rem 1rem #666;
-//   cursor: pointer;
-//   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-//   backface-visibility: hidden;
 
-//   &:hover {
-//     transform: scale(1.05) translate3d( 0, 0, 0);
-//     box-shadow: .5rem .9rem 1.2rem #666 ;
-//   }
-// }
-
-// .character-card-image-container {
-//   .character-card-image {
-//     max-height: 20rem;
-//     max-width: 17rem;
-//     margin-bottom: 1.2rem;
-//     margin-top: .9rem;
-//     border-radius: 0.4rem;
-//     border: .1rem solid #a7a7a7;
-//   }
-// }
-
-// .character-card-info {
-//   text-transform: capitalize;
-// }
-
-// .character-card-info-name {
-//   font-family: 'Magorian Regular', serif;
-//   font-size: 2.5rem;
-// }
+@media screen and (max-width: 500px) {
+  .character-card {
+    margin: 3rem 1rem;
+  }
+}
