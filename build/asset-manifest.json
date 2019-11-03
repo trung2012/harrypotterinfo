@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4db37b71.chunk.css",
+    "main.css": "/static/css/main.8a9c25a2.chunk.css",
     "main.js": "/static/js/main.f8c4e477.chunk.js",
     "main.js.map": "/static/js/main.f8c4e477.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -8,9 +8,9 @@
     "static/js/2.57659e45.chunk.js": "/static/js/2.57659e45.chunk.js",
     "static/js/2.57659e45.chunk.js.map": "/static/js/2.57659e45.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.264a8f6534b17c8f1ce3f77f1760f08c.js": "/precache-manifest.264a8f6534b17c8f1ce3f77f1760f08c.js",
+    "precache-manifest.9c49e4f1b9b893c6bde653cab779a047.js": "/precache-manifest.9c49e4f1b9b893c6bde653cab779a047.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.4db37b71.chunk.css.map": "/static/css/main.4db37b71.chunk.css.map",
+    "static/css/main.8a9c25a2.chunk.css.map": "/static/css/main.8a9c25a2.chunk.css.map",
     "static/media/App.css": "/static/media/Magorian-web.29e8a2de.woff",
     "static/media/OOTP.png": "/static/media/OOTP.a6da3a22.png",
     "static/media/welcome.styles.scss": "/static/media/background.90a518b0.png",

@@ -5,7 +5,7 @@
 }
 .character-details-page {
   z-index: 10;
-  width: 45%;
+  width: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,7 @@
     align-items: center;
     align-self: center;
 
-    .display-picture {
+    .display-picture {  
       display: block;
       border: .1rem solid rgb(180, 179, 179);
       margin-bottom: 2rem;
@@ -128,7 +128,6 @@ li {
   }
 }
 
-
 @media screen and (max-width: 800px) {
   .character-details-page {
     z-index: 10;
@@ -139,47 +138,22 @@ li {
     text-align: center;
     border: unset;
     margin: 8rem 0 1rem 0;
-    background-color: white;
-    padding-bottom: 3rem;
-    font-size: 1.7rem;
-    box-shadow: .3rem .5rem 1rem #666;
-    animation: slideUp .3s ease-out;
   }
   
   .character-details-page-header {
-    display: flex;
-    flex-direction: column; 
     margin-bottom: 3rem;
     
     .character-details-title {
       padding: .5rem 0;
     }
     .profile-pics {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
       max-width: 70%;
-      align-items: center;
-      align-self: center;
   
       .display-picture {
         width: 100%;
-        display: block;
-        border: .1rem solid rgb(180, 179, 179);
-        margin-bottom: 2rem;
-      }
-  
-      .signature {
-        max-height: 8rem;
-        margin: 1rem 0;
       }
   
     }  
-  }
-  
-  .character-details-sections-container {
-    display: flex;
-    justify-content: stretch; 
   }
   
   .character-details-sections {
@@ -187,10 +161,7 @@ li {
     border: unset;
   }
   
-  .character-details-section {
-    display: flex;
-    flex-direction: column;
-  
+  .character-details-section {  
     &:empty {
       display: none;
     }
@@ -205,34 +176,19 @@ li {
       }
     }
     .character-details-section-content {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
       padding: .5rem 1rem;
-      text-align: center;
       width: 100%;
       margin: .5rem auto;
       
       .character-details-section-content-att {
-        flex: 1;
         padding: 0 .5rem;
-        text-align: left;
+        text-align: center;
       }
       .character-details-section-content-list {
-        text-transform: capitalize;
         text-align: left;
-        flex: 1;
         padding: .4rem 0;
-  
-        li {
-          padding: .3rem 0;
-        }
       }
     }
-  }
-  
-  li {
-    list-style: none;
   }
   
   .back-button {

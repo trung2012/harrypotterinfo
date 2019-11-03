@@ -282,9 +282,13 @@
       .answer {
       font-size: 2rem;
       margin-bottom: 1rem;
+
+        p {
+          &:hover {      
+            transform: unset;
+          }
+        }   
+      }   
     }
-  
   }
-    
-  } 
 }
