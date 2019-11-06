@@ -11,7 +11,7 @@ const HomePage = () => {
         <Directory />
       </div>
       <footer>
-        <p>Attribution: wizardingworld.com, potterapi.com, harrypotter.fandom.com </p>
+        <p>Attributions: wizardingworld.com, potterapi.com, harrypotter.fandom.com </p>
       </footer>
     </>
   );
