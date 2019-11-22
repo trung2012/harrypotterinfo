@@ -1,0 +1,33 @@
+.spell-watch {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  height: 25vw;
+  border: .2rem solid #747474;
+  border-radius: .2rem;
+  transition: height 0.2s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .spell-watch {
+    top: 60%;
+  }
+}  
+
+@media screen and (max-width: 800px) {  
+  .spell-watch {
+    display: none;
+  }
+}  

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SpellWatch from './spell-watch.component';
 
 import './spell-card.styles.scss';
 import placeholderImage from '../assets/spell.png';
@@ -19,21 +20,26 @@ const SpellCard = ({ spell, type, effect, imageUrl }) => {
   }
 
   return (
-    <div className='spell-card' style={cardStyle} >
-      <div className='spell-card-image-container'>
-        <img
-          src={imageUrl ? imageUrl : placeholderImage}
-          alt='profile-pic'
-          className={`spell-card-image ${watching ? 'watch' : ''} `}
-          onClick={watchGif}
-        />
+    <>
+      {
+        watching && <SpellWatch setWatching={setWatching} imageUrl={imageUrl} />
+      }
+      <div className='spell-card' style={cardStyle} >
+        <div className='spell-card-image-container'>
+          <img
+            src={imageUrl ? imageUrl : placeholderImage}
+            alt='profile-pic'
+            className={`spell-card-image ${watching ? 'watch' : ''} `}
+            onClick={watchGif}
+          />
+        </div>
+        <div className='spell-card-info'>
+          <div className='spell-card-info-name' onClick={() => window.open(`https://harrypotter.fandom.com/wiki/${spell.replace(' ', '_')}`)}>{spell}</div>
+          <div className='spell-card-info-item'>Type: {type}</div>
+          <div className='spell-card-info-item'>Effect: {effect}</div>
+        </div>
       </div>
-      <div className='spell-card-info'>
-        <div className='spell-card-info-name' onClick={() => window.open(`https://harrypotter.fandom.com/wiki/${spell.replace(' ', '_')}`)}>{spell}</div>
-        <div className='spell-card-info-item'>Type: {type}</div>
-        <div className='spell-card-info-item'>Effect: {effect}</div>
-      </div>
-    </div>
+    </>
   );
 }
 
