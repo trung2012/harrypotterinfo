@@ -1,6 +1,6 @@
 
 .character-card {
-  min-height: 33rem;  
+  height: 33rem;  
   width: 24rem;
   margin: 3rem 3rem;  
   padding: 1.8rem;
@@ -42,6 +42,8 @@
 
 @media screen and (max-width: 800px) {
   .character-card {
+    height: 28rem;
+    width: 21rem;
     margin: 3rem 2rem;
   }
 }
