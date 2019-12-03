@@ -9,12 +9,12 @@
   text-align: center;
   border-radius: .7rem;  
   border: 0.2rem solid transparent;
-  box-shadow: .3rem .5rem 1rem #666;
+  box-shadow: .1rem .5rem 1rem #666;
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
   &:hover {
     transform: scale(1.05) translate3d( 0, 0, 0);
-    box-shadow: .5rem .9rem 1.2rem #666 ;
+    box-shadow: .1rem .9rem 1.5rem #666;
     border: 0.2rem solid #dadada;
   }
 }
