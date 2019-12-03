@@ -30,7 +30,8 @@
 }  
 
 @media screen and (max-width: 800px) {  
-  .spell-watch {
+  .spell-watch,
+  .overlay {
     display: none;
   }
 }  

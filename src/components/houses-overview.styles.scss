@@ -52,25 +52,39 @@
   .house-image-container {
     margin-bottom: 1rem;
     transition:all .5s ease-in-out;
+    width: 40%;
   
     &:hover {
       transform: scale(1.03);
     }
     
     .house-image {
-      width: 100%;
       border-radius: 1rem;
+      width: 100%;
     }
   } 
 }
 
 @media screen and (max-width: 800px) {
-  .house{    
+  .house {    
     font-size: 5rem;
   }
 
-  .menu-item-image {
-    height: auto;
-    width: 90%;
-  }
+  .house-image-container {
+    width: 60%;
+    .house-image {
+      height: auto;
+      margin: 0 auto;
+    }
+  } 
+}
+
+@media screen and (max-width: 600px) {
+  .house-image-container {
+    width: 80%;
+    .house-image {
+      height: auto;
+      margin: 0 auto;
+    }
+  } 
 }

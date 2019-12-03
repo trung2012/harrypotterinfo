@@ -11,6 +11,7 @@
   border: 0.2rem solid transparent;
   box-shadow: .1rem .5rem 1rem #666;
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  backface-visibility: hidden;
 
   &:hover {
     transform: scale(1.05) translate3d( 0, 0, 0);
@@ -60,7 +61,12 @@
 }
 
 @media screen and (max-width: 800px) {
-  
+  .spell-card {
+    &:hover {
+      transform: none;
+    }
+  }
+
   .spell-card-info {
     width: 100%;
     line-height: 1.5;
@@ -87,8 +93,8 @@
 
 @media screen and (max-width: 500px) {
   .spell-card {  
-    width: 75vw;
-    height: 57vh;
+    width: 60vw;
+    height: 75vw;
 
     &:hover {
       transform: unset;
