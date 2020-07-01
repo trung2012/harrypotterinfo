@@ -2,7 +2,7 @@ const sections = [
   {
     id: 1,
     title: 'Sorting Hat',
-    imageUrl: 'https://bit.ly/2KattnT',
+    imageUrl: 'https://bit.ly/2Bq3kBk',
     pathUrl: 'sortinghat'
   },
   {
