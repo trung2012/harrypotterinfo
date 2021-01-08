@@ -1,6 +1,8 @@
 # Harry Potter Info
 Harry Potter information lookup for Harry Potter fans
 
+## Unfortunately, the API this app uses is currently down. The sorting hat still works, though!
+
 #### Click [here](https://harrypotterinfo.netlify.com/) to view a live demo.
 
 ![Harry Potter Info Image](https://i.ibb.co/qyNLNCL/demo-HPI.jpg)
